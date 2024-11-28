@@ -2,4 +2,4 @@ site_name: FairSense
 theme:
   name: readthedocs
 nav:
-  - API Reference: api_reference.md
+  - API Reference: index.md

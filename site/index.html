@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>FairSense</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Reference";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> FairSense
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-core-components">1. Core Components</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#device-setup">Device Setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#model-initialization">Model Initialization</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-helper-functions">2. Helper Functions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#post_process_responseresponse">post_process_response(response)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#highlight_biastext-bias_words">highlight_bias(text, bias_words)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-text-analysis">3. Text Analysis</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#generate_response_with_modelprompt-progressnone">generate_response_with_model(prompt, progress=None)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analyze_text_for_biastext_input-progressgrprogress">analyze_text_for_bias(text_input, progress=gr.Progress())</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-image-analysis">4. Image Analysis</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#preprocess_imageimage">preprocess_image(image)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analyze_image_for_biasimage-progressgrprogress">analyze_image_for_bias(image, progress=gr.Progress())</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-batch-processing">5. Batch Processing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#analyze_text_csvfile-output_filenameanalysis_resultscsv">analyze_text_csv(file, output_filename="analysis_results.csv")</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#analyze_images_batchimages-output_filenameimage_analysis_resultscsv">analyze_images_batch(images, output_filename="image_analysis_results.csv")</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save_results_to_csvdf-filenameresultscsv">save_results_to_csv(df, filename="results.csv")</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-ai-governance">6. AI Governance</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ai_governance_responseprompt-progressnone">ai_governance_response(prompt, progress=None)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-ai-safety-dashboard">7. AI Safety Dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#display_ai_safety_dashboard">display_ai_safety_dashboard()</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">FairSense</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="fairsense-api-documentation"><strong>FairSense API Documentation</strong></h1>
+<hr />
+<h2 id="introduction"><strong>Introduction</strong></h2>
+<p>FairSense is an AI-driven platform for detecting and analyzing bias in textual and visual content. This document outlines the key functions and APIs provided by FairSense for integration and usage.</p>
+<hr />
+<h2 id="1-core-components"><strong>1. Core Components</strong></h2>
+<h3 id="device-setup"><strong>Device Setup</strong></h3>
+<p>Sets up the device for model computation (CPU or GPU).</p>
+<pre><code class="language-python">DEVICE = torch.device(&quot;cuda&quot; if torch.cuda.is_available() else &quot;cpu&quot;)
+</code></pre>
+<hr />
+<h3 id="model-initialization"><strong>Model Initialization</strong></h3>
+<p>Preloads the required models:
+- <strong>Text Model</strong>: <code>meta-llama/Llama-3.2-1B-Instruct</code>
+- <strong>Image Captioning Model</strong>: <code>Salesforce/blip-image-captioning-large</code>
+- <strong>Summarizer</strong>: <code>sshleifer/distilbart-cnn-12-6</code></p>
+<hr />
+<h2 id="2-helper-functions"><strong>2. Helper Functions</strong></h2>
+<h3 id="post_process_responseresponse"><strong><code>post_process_response(response)</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Cleans and summarizes AI model responses.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>response</code> <em>(str)</em>: The raw response from the AI model.</li>
+<li><strong>Returns</strong>: A cleaned and summarized response string.</li>
+<li><strong>Example</strong>:
+  <code>python
+  processed_response = post_process_response("This is the raw response from the model.")
+  print(processed_response)</code></li>
+</ul>
+<hr />
+<h3 id="highlight_biastext-bias_words"><strong><code>highlight_bias(text, bias_words)</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Highlights specific biased words in the text.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>text</code> <em>(str)</em>: The input text to analyze.</li>
+<li><code>bias_words</code> <em>(list)</em>: A list of words to highlight as biased.</li>
+<li><strong>Returns</strong>: HTML-formatted text with highlighted bias words.</li>
+<li><strong>Example</strong>:
+  <code>python
+  highlighted_text = highlight_bias("This is a biased statement.", ["biased"])
+  print(highlighted_text)</code></li>
+</ul>
+<hr />
+<h2 id="3-text-analysis"><strong>3. Text Analysis</strong></h2>
+<h3 id="generate_response_with_modelprompt-progressnone"><strong><code>generate_response_with_model(prompt, progress=None)</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Generates a response from the AI model for a given prompt.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>prompt</code> <em>(str)</em>: The input prompt for the model.</li>
+<li><code>progress</code> <em>(callable, optional)</em>: Function to track progress.</li>
+<li><strong>Returns</strong>: AI-generated response as a string.</li>
+<li><strong>Example</strong>:
+  <code>python
+  response = generate_response_with_model("Analyze this text for bias.")
+  print(response)</code></li>
+</ul>
+<hr />
+<h3 id="analyze_text_for_biastext_input-progressgrprogress"><strong><code>analyze_text_for_bias(text_input, progress=gr.Progress())</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Analyzes a given text for bias and provides a detailed analysis.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>text_input</code> <em>(str)</em>: Text to analyze.</li>
+<li><code>progress</code> <em>(gr.Progress)</em>: Progress tracker.</li>
+<li><strong>Returns</strong>: Highlighted text and detailed analysis.</li>
+<li><strong>Example</strong>:
+  <code>python
+  highlighted, analysis = analyze_text_for_bias("This text may contain bias.")
+  print(highlighted)
+  print(analysis)</code></li>
+</ul>
+<hr />
+<h2 id="4-image-analysis"><strong>4. Image Analysis</strong></h2>
+<h3 id="preprocess_imageimage"><strong><code>preprocess_image(image)</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Converts images to grayscale and applies thresholding for OCR.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>image</code> <em>(PIL.Image)</em>: The input image.</li>
+<li><strong>Returns</strong>: A preprocessed image for OCR.</li>
+<li><strong>Example</strong>:
+  <code>python
+  from PIL import Image
+  image = Image.open("example.jpg")
+  preprocessed = preprocess_image(image)
+  preprocessed.show()</code></li>
+</ul>
+<hr />
+<h3 id="analyze_image_for_biasimage-progressgrprogress"><strong><code>analyze_image_for_bias(image, progress=gr.Progress())</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Analyzes an image for bias by extracting text and generating captions.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>image</code> <em>(PIL.Image)</em>: The input image.</li>
+<li><code>progress</code> <em>(gr.Progress)</em>: Progress tracker.</li>
+<li><strong>Returns</strong>: Highlighted captions and detailed analysis.</li>
+<li><strong>Example</strong>:
+  <code>python
+  image = Image.open("example.jpg")
+  highlighted, analysis = analyze_image_for_bias(image)
+  print(highlighted)
+  print(analysis)</code></li>
+</ul>
+<hr />
+<h2 id="5-batch-processing"><strong>5. Batch Processing</strong></h2>
+<h3 id="analyze_text_csvfile-output_filenameanalysis_resultscsv"><strong><code>analyze_text_csv(file, output_filename="analysis_results.csv")</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Analyzes a CSV file of text entries for bias.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>file</code> <em>(File)</em>: CSV file with text data.</li>
+<li><code>output_filename</code> <em>(str)</em>: Name of the output CSV file.</li>
+<li><strong>Returns</strong>: An HTML table with analysis results.</li>
+<li><strong>Example</strong>:
+  <code>python
+  html_table = analyze_text_csv("data.csv")
+  print(html_table)</code></li>
+</ul>
+<hr />
+<h3 id="analyze_images_batchimages-output_filenameimage_analysis_resultscsv"><strong><code>analyze_images_batch(images, output_filename="image_analysis_results.csv")</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Analyzes multiple images for bias.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>images</code> <em>(list)</em>: List of image paths.</li>
+<li><code>output_filename</code> <em>(str)</em>: Name of the output file.</li>
+<li><strong>Returns</strong>: HTML table with analysis results and image previews.</li>
+<li><strong>Example</strong>:
+  <code>python
+  results = analyze_images_batch(["image1.jpg", "image2.png"])
+  print(results)</code></li>
+</ul>
+<hr />
+<h3 id="save_results_to_csvdf-filenameresultscsv"><strong><code>save_results_to_csv(df, filename="results.csv")</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Saves analysis results to a CSV file.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>df</code> <em>(pandas.DataFrame)</em>: DataFrame containing results.</li>
+<li><code>filename</code> <em>(str)</em>: Name of the output file.</li>
+<li><strong>Returns</strong>: Path to the saved file.</li>
+<li><strong>Example</strong>:
+  <code>python
+  results_df = pd.DataFrame([{"text": "example", "analysis": "unbiased"}])
+  save_path = save_results_to_csv(results_df, "output.csv")
+  print(save_path)</code></li>
+</ul>
+<hr />
+<h2 id="6-ai-governance"><strong>6. AI Governance</strong></h2>
+<h3 id="ai_governance_responseprompt-progressnone"><strong><code>ai_governance_response(prompt, progress=None)</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Provides insights into AI governance and safety.</li>
+<li><strong>Parameters</strong>:</li>
+<li><code>prompt</code> <em>(str)</em>: Topic or question about AI governance.</li>
+<li><code>progress</code> <em>(callable, optional)</em>: Progress tracker.</li>
+<li><strong>Returns</strong>: AI-generated insights and recommendations.</li>
+<li><strong>Example</strong>:
+  <code>python
+  insights = ai_governance_response("Discuss AI ethics.")
+  print(insights)</code></li>
+</ul>
+<hr />
+<h2 id="7-ai-safety-dashboard"><strong>7. AI Safety Dashboard</strong></h2>
+<h3 id="display_ai_safety_dashboard"><strong><code>display_ai_safety_dashboard()</code></strong></h3>
+<ul>
+<li><strong>Purpose</strong>: Visualizes AI safety risks using interactive charts.</li>
+<li><strong>Returns</strong>: Tuple containing bar chart, pie chart, scatter plot, and DataFrame.</li>
+<li><strong>Example</strong>:
+  <code>python
+  fig_bar, fig_pie, fig_scatter, risks_df = display_ai_safety_dashboard()
+  fig_bar.show()</code></li>
+</ul>
+<hr />
+<h1 id="demo-video">Demo Video</h1>
+<p>Watch the demonstration of the FairSense platform below:</p>
+<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
+        width="600" height="450" allow="autoplay"></iframe>
+
+<h2 id="next-steps"><strong>Next Steps</strong></h2>
+<p>This documentation provides the foundation for integrating FairSense into your workflows. 
+<strong>Contact</strong>: For inquiries, collaborations, or feedback, connect with <strong>Shaina Raza, PhD</strong>,  at <strong>shaina.raza@vectorinstitute.ai</strong>.
+Let me know if you need anything else added! 😊</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-11-28 17:27:23.907291+00:00
+-->
