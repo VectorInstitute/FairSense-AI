@@ -2,7 +2,7 @@
 
 Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.
 
-📦 [Fair-Sense-AI on PyPI](https://pypi.org/project/fair-sense-ai/0.1.2/)
+📦 [Fair-Sense-AI on PyPI](https://pypi.org/project/fair-sense-ai/)
 
 ---
 
