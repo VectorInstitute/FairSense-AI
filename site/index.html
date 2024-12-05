@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>FairSense</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Reference";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> FairSense
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#text-analysis">📄 Text Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#image-analysis">🖼️ Image Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#batch-processing">📂 Batch Processing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ai-governance-insights">📜 AI Governance Insights</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-guide">Installation Guide</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#installing-fair-sense-ai">Installing Fair-Sense-AI</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-instructions">Usage Instructions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#launching-the-application">Launching the Application</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bias-detection-tutorial">Bias Detection Tutorial</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#install-required-packages">Install Required Packages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#code-examples">Code Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-text-bias-analysis">1. Text Bias Analysis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-image-bias-analysis">2. Image Bias Analysis</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-launch-the-interactive-application">3. Launch the Interactive Application</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-fair-sense-ai">How to Use Fair-Sense-AI</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-text-analysis">1. Text Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-image-analysis">2. Image Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-batch-text-csv-analysis">3. Batch Text CSV Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-batch-image-analysis">4. Batch Image Analysis</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-ai-governance-insights">5. AI Governance Insights</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-issues">Common Issues</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-data">Sample Data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#license">License</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="documentation/">Documentation</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">FairSense</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="fair-sense-ai"><strong>Fair-Sense-AI</strong></h1>
+<p>Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.</p>
+<hr />
+<h2 id="key-features"><strong>Key Features</strong></h2>
+<h3 id="text-analysis">📄 <strong>Text Analysis</strong></h3>
+<ul>
+<li>Detect and highlight biases within text, such as targeted language or phrases.</li>
+<li>Provide actionable feedback on the tone and fairness of the content.</li>
+</ul>
+<h3 id="image-analysis">🖼️ <strong>Image Analysis</strong></h3>
+<ul>
+<li>Extract embedded text from images and analyze it for potential biases.</li>
+<li>Generate captions for images and evaluate their fairness and inclusivity.</li>
+</ul>
+<h3 id="batch-processing">📂 <strong>Batch Processing</strong></h3>
+<ul>
+<li>Analyze large datasets of text or images efficiently.</li>
+<li>Automatically highlight problematic patterns across entire datasets.</li>
+</ul>
+<h3 id="ai-governance-insights">📜 <strong>AI Governance Insights</strong></h3>
+<ul>
+<li>Gain detailed insights into ethical AI practices, fairness guidelines, and bias mitigation strategies.</li>
+<li>Explore topics like data privacy, transparency, and responsible AI deployment.</li>
+</ul>
+<hr />
+<h2 id="installation-guide"><strong>Installation Guide</strong></h2>
+<h3 id="prerequisites"><strong>Prerequisites</strong></h3>
+<ol>
+<li><strong>Python 3.7+</strong></li>
+<li>
+<p>Ensure you have Python installed. Download it <a href="https://www.python.org/downloads/">here</a>.</p>
+</li>
+<li>
+<p><strong>Tesseract OCR</strong>  </p>
+</li>
+<li>Required for extracting text from images.</li>
+</ol>
+<p>#### Installation Instructions:
+   - <strong>Ubuntu</strong>:
+     <code>bash
+     sudo apt-get update
+     sudo apt-get install tesseract-ocr</code>
+   - <strong>macOS (Homebrew)</strong>:
+     <code>bash
+     brew install tesseract</code>
+   - <strong>Windows</strong>:
+     - Download and install Tesseract OCR from <a href="https://github.com/UB-Mannheim/tesseract/wiki">this link</a>.</p>
+<h3 id="installing-fair-sense-ai"><strong>Installing Fair-Sense-AI</strong></h3>
+<p>Install the Fair-Sense-AI package using pip:</p>
+<pre><code class="language-bash">pip install Fair-Sense-AI
+</code></pre>
+<h2 id="usage-instructions"><strong>Usage Instructions</strong></h2>
+<h3 id="launching-the-application"><strong>Launching the Application</strong></h3>
+<p>Run the following command to start Fair-Sense-AI:</p>
+<pre><code class="language-bash">Fair-Sense-AI
+</code></pre>
+<p>This will launch the Gradio-powered interface in your default web browser.</p>
+<h2 id="bias-detection-tutorial"><strong>Bias Detection Tutorial</strong></h2>
+<h3 id="setup"><strong>Setup</strong></h3>
+<ol>
+<li><strong>Download the Data</strong>:  </li>
+<li>Download the data from <a href="https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing">this Google Drive link</a>.</li>
+<li>Upload the downloaded files to your environment (e.g., Jupyter Notebook, Google Colab, etc.).</li>
+</ol>
+<hr />
+<h3 id="install-required-packages"><strong>Install Required Packages</strong></h3>
+<pre><code class="language-bash">!pip install --quiet fair-sense-ai
+!pip uninstall sympy -y
+!pip install sympy --upgrade
+!apt update
+!apt install -y tesseract-ocr
+</code></pre>
+<p><strong>Restart your system if you are using Google Colab.</strong><br />
+Example Colab Notebook: <a href="https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing">Run the Tutorial</a></p>
+<hr />
+<h3 id="code-examples"><strong>Code Examples</strong></h3>
+<h4 id="1-text-bias-analysis"><strong>1. Text Bias Analysis</strong></h4>
+<pre><code class="language-python"># Import Required Libraries
+from fairsenseai import analyze_text_for_bias
+
+# Example input text to analyze for bias
+text_input = &quot;Women are better at multitasking than men.&quot;
+
+# Analyze the text for bias using FairSense AI
+highlighted_text, detailed_analysis = analyze_text_for_bias(text_input)
+
+# Print the analysis results
+print(&quot;Highlighted Text:&quot;, highlighted_text)
+print(&quot;Detailed Analysis:&quot;, detailed_analysis)
+</code></pre>
+<h4 id="2-image-bias-analysis"><strong>2. Image Bias Analysis</strong></h4>
+<pre><code class="language-python"># Import Required Libraries
+import requests
+from PIL import Image
+from io import BytesIO
+from fairsenseai import analyze_image_for_bias
+from IPython.display import display, HTML
+
+# URL of the image to analyze
+image_url = &quot;https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2018/05/31/20b096c2-64b4-11e8-82ea-2acc56ad2bf7_1280x720_173440.jpg?itok=2I32exTB&quot;
+
+# Fetch and load the image
+response = requests.get(image_url)
+if response.status_code == 200:
+    # Load the image
+    image = Image.open(BytesIO(response.content))
+
+    # Resize the image for smaller display
+    small_image = image.copy()
+    small_image.thumbnail((200, 200))  # Maintain aspect ratio while resizing
+
+    # Display the resized image
+    print(&quot;Original Image (Resized):&quot;)
+    display(small_image)
+
+    # Analyze the image for bias
+    highlighted_caption, image_analysis = analyze_image_for_bias(image)
+
+    # Print the analysis results
+    print(&quot;Highlighted Caption:&quot;, highlighted_caption)
+    print(&quot;Image Analysis:&quot;, image_analysis)
+
+    # Display highlighted captions (if available)
+    if highlighted_caption:
+        display(HTML(highlighted_caption))
+else:
+    print(f&quot;Failed to fetch the image. Status code: {response.status_code}&quot;)
+</code></pre>
+<h3 id="3-launch-the-interactive-application"><strong>3. Launch the Interactive Application</strong></h3>
+<pre><code class="language-python">from fairsenseai import main
+
+# Launch the Gradio application (will open in the browser)
+main()
+</code></pre>
+<hr />
+<h2 id="how-to-use-fair-sense-ai"><strong>How to Use Fair-Sense-AI</strong></h2>
+<h3 id="1-text-analysis"><strong>1. Text Analysis</strong></h3>
+<ul>
+<li>Navigate to the <strong>Text Analysis</strong> tab in the Gradio interface.</li>
+<li>Input or paste the text you want to analyze.</li>
+<li>Click <strong>Analyze</strong> to detect and highlight biases.</li>
+</ul>
+<h3 id="2-image-analysis"><strong>2. Image Analysis</strong></h3>
+<ul>
+<li>Navigate to the <strong>Image Analysis</strong> tab.</li>
+<li>Upload an image to analyze for biases in embedded text or captions.</li>
+<li>Click <strong>Analyze</strong> to view detailed results.</li>
+</ul>
+<h3 id="3-batch-text-csv-analysis"><strong>3. Batch Text CSV Analysis</strong></h3>
+<ul>
+<li>Navigate to the <strong>Batch Text CSV Analysis</strong> tab.</li>
+<li>Upload a CSV file with a column named <code>text</code>.</li>
+<li>Click <strong>Analyze CSV</strong> to process and analyze all entries.</li>
+</ul>
+<h3 id="4-batch-image-analysis"><strong>4. Batch Image Analysis</strong></h3>
+<ul>
+<li>Navigate to the <strong>Batch Image Analysis</strong> tab.</li>
+<li>Upload multiple images to analyze biases in captions or embedded text.</li>
+<li>Click <strong>Analyze Images</strong> to view results.</li>
+</ul>
+<h3 id="5-ai-governance-insights"><strong>5. AI Governance Insights</strong></h3>
+<ul>
+<li>Navigate to the <strong>AI Governance and Safety</strong> tab.</li>
+<li>Choose a predefined topic or input your own.</li>
+<li>Click <strong>Get Insights</strong> for actionable recommendations.</li>
+</ul>
+<hr />
+<h2 id="troubleshooting"><strong>Troubleshooting</strong></h2>
+<h3 id="common-issues"><strong>Common Issues</strong></h3>
+<ul>
+<li><strong>Models Download Slowly</strong>:  </li>
+<li>
+<p>On first use, models are downloaded automatically. Ensure you have a stable internet connection.</p>
+</li>
+<li>
+<p><strong>Tesseract Not Found</strong>:  </p>
+</li>
+<li>
+<p>Verify Tesseract is installed and accessible in your system's PATH.</p>
+</li>
+<li>
+<p><strong>GPU Support</strong>:  </p>
+</li>
+<li>Install PyTorch with CUDA support if you want GPU acceleration.</li>
+</ul>
+<p><code>bash
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117</code></p>
+<hr />
+<h2 id="sample-data"><strong>Sample Data</strong></h2>
+<ul>
+<li>A sample CSV file with a <code>text</code> column.</li>
+<li>Sample images for analysis.</li>
+</ul>
+<hr />
+<h2 id="contact"><strong>Contact</strong></h2>
+<p>For inquiries or support, contact:<br />
+<strong>Shaina Raza, PhD</strong><br />
+Applied ML Scientist, Responsible AI<br />
+<a href="mailto:shaina.raza@vectorinstitute.ai">shaina.raza@vectorinstitute.ai</a></p>
+<hr />
+<h2 id="license"><strong>License</strong></h2>
+<p>This project is licensed under the <a href="https://creativecommons.org/licenses/">Creative Commons License</a>.</p>
+<hr />
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="documentation/" class="btn btn-neutral float-right" title="Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.0
+Build Date UTC : 2024-12-05 13:17:50.104179+00:00
+-->

@@ -193,13 +193,6 @@ Preloads the required models:
 
 ---
 
-# Demo Video
-
-Watch the demonstration of the FairSense platform below:
-
-<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
-        width="600" height="450" allow="autoplay"></iframe>
-
 
 
 ## **Next Steps**

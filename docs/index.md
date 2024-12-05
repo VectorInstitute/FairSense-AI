@@ -25,30 +25,15 @@ Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transpar
 - Explore topics like data privacy, transparency, and responsible AI deployment.
 
 ---
+# Demo Video
 
-## **Installation Guide**
+Watch the demonstration of the FairSense platform below:
 
-### **Prerequisites**
+<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
+        width="600" height="450" allow="autoplay"></iframe>
 
-1. **Python 3.7+**
-   - Ensure you have Python installed. Download it [here](https://www.python.org/downloads/).
 
-2. **Tesseract OCR**  
-   - Required for extracting text from images.
-
-   #### Installation Instructions:
-   - **Ubuntu**:
-     ```bash
-     sudo apt-get update
-     sudo apt-get install tesseract-ocr
-     ```
-   - **macOS (Homebrew)**:
-     ```bash
-     brew install tesseract
-     ```
-   - **Windows**:
-     - Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
-
+----
 
 ### **Installing Fair-Sense-AI**
 
@@ -217,10 +202,34 @@ main()
 
 ---
 
-## **Sample Data**
+## **Further instructions**
+**sample data**
 
 - A sample CSV file with a `text` column.
 - Sample images for analysis.
+
+
+ **Prerequisites**
+
+1. **Python 3.7+**
+   - Ensure you have Python installed. Download it [here](https://www.python.org/downloads/).
+
+2. **Tesseract OCR**  
+   - Required for extracting text from images.
+
+   #### Installation Instructions:
+   - **Ubuntu**:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install tesseract-ocr
+     ```
+   - **macOS (Homebrew)**:
+     ```bash
+     brew install tesseract
+     ```
+   - **Windows**:
+     - Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
+
 
 ---
 
