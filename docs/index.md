@@ -1,9 +1,8 @@
 
+
 # **Fair-Sense-AI**
 
-Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content.
-
-Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.
+Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.
 
 ---
 
@@ -32,10 +31,10 @@ Whether you're addressing societal biases, identifying disinformation, or foster
 ### **Prerequisites**
 
 1. **Python 3.7+**
-   Ensure you have Python installed. You can download it [here](https://www.python.org/downloads/).
+   - Ensure you have Python installed. Download it [here](https://www.python.org/downloads/).
 
 2. **Tesseract OCR**  
-   Required for extracting text from images.
+   - Required for extracting text from images.
 
    #### Installation Instructions:
    - **Ubuntu**:
@@ -48,9 +47,8 @@ Whether you're addressing societal biases, identifying disinformation, or foster
      brew install tesseract
      ```
    - **Windows**:
-     Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
+     - Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
 
----
 
 ### **Installing Fair-Sense-AI**
 
@@ -59,8 +57,6 @@ Install the Fair-Sense-AI package using pip:
 ```bash
 pip install Fair-Sense-AI
 ```
-
----
 
 ## **Usage Instructions**
 
@@ -74,87 +70,95 @@ Fair-Sense-AI
 
 This will launch the Gradio-powered interface in your default web browser.
 
----
 
 ## **Bias Detection Tutorial**
 
 ### **Setup**
 
 1. **Download the Data**:  
-   Download the data from [this Google Drive link](https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing).
-
-2. **Upload the Data**:  
-   Upload the downloaded files to the environment where you are running this tutorial (e.g., Jupyter Notebook, Google Colab, etc.).
+   - Download the data from [this Google Drive link](https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing).
+   - Upload the downloaded files to your environment (e.g., Jupyter Notebook, Google Colab, etc.).
 
 ---
 
 ### **Install Required Packages**
 
 ```bash
-!pip install --quiet fairsenseai
+!pip install --quiet fair-sense-ai
 !pip uninstall sympy -y
 !pip install sympy --upgrade
 !apt update
 !apt install -y tesseract-ocr
 ```
 
+**Restart your system if you are using Google Colab.**  
+Example Colab Notebook: [Run the Tutorial](https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing)
+
 ---
 
 ### **Code Examples**
 
-#### **Text Bias Analysis**
+#### **1. Text Bias Analysis**
 
 ```python
-# Example input text to analyze for bias.
+# Import Required Libraries
+from fairsenseai import analyze_text_for_bias
+
+# Example input text to analyze for bias
 text_input = "Women are better at multitasking than men."
 
-# Analyze the text for bias using FairSense AI.
+# Analyze the text for bias using FairSense AI
 highlighted_text, detailed_analysis = analyze_text_for_bias(text_input)
 
-# Print the analysis results.
+# Print the analysis results
 print("Highlighted Text:", highlighted_text)
 print("Detailed Analysis:", detailed_analysis)
 ```
 
----
 
-#### **Image Bias Analysis**
+#### **2. Image Bias Analysis**
 
 ```python
-# URL of the image to analyze.
+# Import Required Libraries
+import requests
+from PIL import Image
+from io import BytesIO
+from fairsenseai import analyze_image_for_bias
+from IPython.display import display, HTML
+
+# URL of the image to analyze
 image_url = "https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2018/05/31/20b096c2-64b4-11e8-82ea-2acc56ad2bf7_1280x720_173440.jpg?itok=2I32exTB"
 
-# Fetch and load the image from the URL.
+# Fetch and load the image
 response = requests.get(image_url)
 if response.status_code == 200:
-    # Load the image.
+    # Load the image
     image = Image.open(BytesIO(response.content))
 
-    # Resize the image for smaller display.
+    # Resize the image for smaller display
     small_image = image.copy()
-    small_image.thumbnail((200, 200))  # Maintain aspect ratio while resizing.
+    small_image.thumbnail((200, 200))  # Maintain aspect ratio while resizing
 
-    # Display the resized image.
+    # Display the resized image
     print("Original Image (Resized):")
     display(small_image)
 
-    # Analyze the image for bias.
+    # Analyze the image for bias
     highlighted_caption, image_analysis = analyze_image_for_bias(image)
 
-    # Print the analysis results.
+    # Print the analysis results
     print("Highlighted Caption:", highlighted_caption)
     print("Image Analysis:", image_analysis)
 
-    # Display highlighted captions (if available).
+    # Display highlighted captions (if available)
     if highlighted_caption:
         display(HTML(highlighted_caption))
 else:
     print(f"Failed to fetch the image. Status code: {response.status_code}")
 ```
 
----
 
-### **Launch the Interactive Application**
+### **3. Launch the Interactive Application**
 
 ```python
 from fairsenseai import main
@@ -198,13 +202,18 @@ main()
 
 ### **Common Issues**
 
-- **Models Download Slowly**: On first use, models are downloaded automatically. Ensure you have a stable internet connection.
-- **Tesseract Not Found**: Verify Tesseract is installed and accessible in your system's PATH.
-- **GPU Support**: Install PyTorch with CUDA support if you want GPU acceleration.
+- **Models Download Slowly**:  
+  - On first use, models are downloaded automatically. Ensure you have a stable internet connection.
 
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-```
+- **Tesseract Not Found**:  
+  - Verify Tesseract is installed and accessible in your system's PATH.
+
+- **GPU Support**:  
+  - Install PyTorch with CUDA support if you want GPU acceleration.
+  
+  ```bash
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+  ```
 
 ---
 
@@ -218,7 +227,9 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 ## **Contact**
 
 For inquiries or support, contact:  
-**Shaina Raza, PhD** , Applied ML Scientist, Responsible AI ,[shaina.raza@vectorinstitute.ai](mailto:shaina.raza@vectorinstitute.ai)
+**Shaina Raza, PhD**  
+Applied ML Scientist, Responsible AI  
+[shaina.raza@vectorinstitute.ai](mailto:shaina.raza@vectorinstitute.ai)
 
 ---
 
@@ -227,3 +238,4 @@ For inquiries or support, contact:
 This project is licensed under the [Creative Commons License](https://creativecommons.org/licenses/).
 
 ---
+ 

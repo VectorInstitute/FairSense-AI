@@ -3,3 +3,4 @@ theme:
   name: readthedocs
 nav:
   - API Reference: index.md
+  - Documentation: documentation.md
