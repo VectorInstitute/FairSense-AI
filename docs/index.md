@@ -1,211 +1,229 @@
-# **FairSense API Documentation**
+
+# **Fair-Sense-AI**
+
+Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content.
+
+Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.
 
 ---
-## **Introduction**
 
-FairSense is an AI-driven platform for detecting and analyzing bias in textual and visual content. This document outlines the key functions and APIs provided by FairSense for integration and usage.
-We are releasing a multimodal bias detection toolkit
+## **Key Features**
+
+### 📄 **Text Analysis**
+- Detect and highlight biases within text, such as targeted language or phrases.
+- Provide actionable feedback on the tone and fairness of the content.
+
+### 🖼️ **Image Analysis**
+- Extract embedded text from images and analyze it for potential biases.
+- Generate captions for images and evaluate their fairness and inclusivity.
+
+### 📂 **Batch Processing**
+- Analyze large datasets of text or images efficiently.
+- Automatically highlight problematic patterns across entire datasets.
+
+### 📜 **AI Governance Insights**
+- Gain detailed insights into ethical AI practices, fairness guidelines, and bias mitigation strategies.
+- Explore topics like data privacy, transparency, and responsible AI deployment.
 
 ---
 
-## **1. Core Components**
+## **Installation Guide**
 
-### **Device Setup**
-Sets up the device for model computation (CPU or GPU).
-```python
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+### **Prerequisites**
+
+1. **Python 3.7+**
+   Ensure you have Python installed. You can download it [here](https://www.python.org/downloads/).
+
+2. **Tesseract OCR**  
+   Required for extracting text from images.
+
+   #### Installation Instructions:
+   - **Ubuntu**:
+     ```bash
+     sudo apt-get update
+     sudo apt-get install tesseract-ocr
+     ```
+   - **macOS (Homebrew)**:
+     ```bash
+     brew install tesseract
+     ```
+   - **Windows**:
+     Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
+
+---
+
+### **Installing Fair-Sense-AI**
+
+Install the Fair-Sense-AI package using pip:
+
+```bash
+pip install Fair-Sense-AI
 ```
 
 ---
 
-### **Model Initialization**
-Preloads the required models:
-- **Text Model**: `meta-llama/Llama-3.2-1B-Instruct`
-- **Image Captioning Model**: `Salesforce/blip-image-captioning-large`
-- **Summarizer**: `sshleifer/distilbart-cnn-12-6`
+## **Usage Instructions**
+
+### **Launching the Application**
+
+Run the following command to start Fair-Sense-AI:
+
+```bash
+Fair-Sense-AI
+```
+
+This will launch the Gradio-powered interface in your default web browser.
 
 ---
 
-## **2. Helper Functions**
+## **Bias Detection Tutorial**
 
-### **`post_process_response(response)`**
-- **Purpose**: Cleans and summarizes AI model responses.
-- **Parameters**:
-  - `response` *(str)*: The raw response from the AI model.
-- **Returns**: A cleaned and summarized response string.
-- **Example**:
-  ```python
-  processed_response = post_process_response("This is the raw response from the model.")
-  print(processed_response)
-  ```
+### **Setup**
+
+1. **Download the Data**:  
+   Download the data from [this Google Drive link](https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing).
+
+2. **Upload the Data**:  
+   Upload the downloaded files to the environment where you are running this tutorial (e.g., Jupyter Notebook, Google Colab, etc.).
 
 ---
 
-### **`highlight_bias(text, bias_words)`**
-- **Purpose**: Highlights specific biased words in the text.
-- **Parameters**:
-  - `text` *(str)*: The input text to analyze.
-  - `bias_words` *(list)*: A list of words to highlight as biased.
-- **Returns**: HTML-formatted text with highlighted bias words.
-- **Example**:
-  ```python
-  highlighted_text = highlight_bias("This is a biased statement.", ["biased"])
-  print(highlighted_text)
-  ```
+### **Install Required Packages**
+
+```bash
+!pip install --quiet fairsenseai
+!pip uninstall sympy -y
+!pip install sympy --upgrade
+!apt update
+!apt install -y tesseract-ocr
+```
 
 ---
 
-## **3. Text Analysis**
+### **Code Examples**
 
-### **`generate_response_with_model(prompt, progress=None)`**
-- **Purpose**: Generates a response from the AI model for a given prompt.
-- **Parameters**:
-  - `prompt` *(str)*: The input prompt for the model.
-  - `progress` *(callable, optional)*: Function to track progress.
-- **Returns**: AI-generated response as a string.
-- **Example**:
-  ```python
-  response = generate_response_with_model("Analyze this text for bias.")
-  print(response)
-  ```
+#### **Text Bias Analysis**
 
----
+```python
+# Example input text to analyze for bias.
+text_input = "Women are better at multitasking than men."
 
-### **`analyze_text_for_bias(text_input, progress=gr.Progress())`**
-- **Purpose**: Analyzes a given text for bias and provides a detailed analysis.
-- **Parameters**:
-  - `text_input` *(str)*: Text to analyze.
-  - `progress` *(gr.Progress)*: Progress tracker.
-- **Returns**: Highlighted text and detailed analysis.
-- **Example**:
-  ```python
-  highlighted, analysis = analyze_text_for_bias("This text may contain bias.")
-  print(highlighted)
-  print(analysis)
-  ```
+# Analyze the text for bias using FairSense AI.
+highlighted_text, detailed_analysis = analyze_text_for_bias(text_input)
+
+# Print the analysis results.
+print("Highlighted Text:", highlighted_text)
+print("Detailed Analysis:", detailed_analysis)
+```
 
 ---
 
-## **4. Image Analysis**
+#### **Image Bias Analysis**
 
-### **`preprocess_image(image)`**
-- **Purpose**: Converts images to grayscale and applies thresholding for OCR.
-- **Parameters**:
-  - `image` *(PIL.Image)*: The input image.
-- **Returns**: A preprocessed image for OCR.
-- **Example**:
-  ```python
-  from PIL import Image
-  image = Image.open("example.jpg")
-  preprocessed = preprocess_image(image)
-  preprocessed.show()
-  ```
+```python
+# URL of the image to analyze.
+image_url = "https://cdn.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2018/05/31/20b096c2-64b4-11e8-82ea-2acc56ad2bf7_1280x720_173440.jpg?itok=2I32exTB"
 
----
+# Fetch and load the image from the URL.
+response = requests.get(image_url)
+if response.status_code == 200:
+    # Load the image.
+    image = Image.open(BytesIO(response.content))
 
-### **`analyze_image_for_bias(image, progress=gr.Progress())`**
-- **Purpose**: Analyzes an image for bias by extracting text and generating captions.
-- **Parameters**:
-  - `image` *(PIL.Image)*: The input image.
-  - `progress` *(gr.Progress)*: Progress tracker.
-- **Returns**: Highlighted captions and detailed analysis.
-- **Example**:
-  ```python
-  image = Image.open("example.jpg")
-  highlighted, analysis = analyze_image_for_bias(image)
-  print(highlighted)
-  print(analysis)
-  ```
+    # Resize the image for smaller display.
+    small_image = image.copy()
+    small_image.thumbnail((200, 200))  # Maintain aspect ratio while resizing.
 
----
+    # Display the resized image.
+    print("Original Image (Resized):")
+    display(small_image)
 
-## **5. Batch Processing**
+    # Analyze the image for bias.
+    highlighted_caption, image_analysis = analyze_image_for_bias(image)
 
-### **`analyze_text_csv(file, output_filename="analysis_results.csv")`**
-- **Purpose**: Analyzes a CSV file of text entries for bias.
-- **Parameters**:
-  - `file` *(File)*: CSV file with text data.
-  - `output_filename` *(str)*: Name of the output CSV file.
-- **Returns**: An HTML table with analysis results.
-- **Example**:
-  ```python
-  html_table = analyze_text_csv("data.csv")
-  print(html_table)
-  ```
+    # Print the analysis results.
+    print("Highlighted Caption:", highlighted_caption)
+    print("Image Analysis:", image_analysis)
+
+    # Display highlighted captions (if available).
+    if highlighted_caption:
+        display(HTML(highlighted_caption))
+else:
+    print(f"Failed to fetch the image. Status code: {response.status_code}")
+```
 
 ---
 
-### **`analyze_images_batch(images, output_filename="image_analysis_results.csv")`**
-- **Purpose**: Analyzes multiple images for bias.
-- **Parameters**:
-  - `images` *(list)*: List of image paths.
-  - `output_filename` *(str)*: Name of the output file.
-- **Returns**: HTML table with analysis results and image previews.
-- **Example**:
-  ```python
-  results = analyze_images_batch(["image1.jpg", "image2.png"])
-  print(results)
-  ```
+### **Launch the Interactive Application**
+
+```python
+from fairsenseai import main
+
+# Launch the Gradio application (will open in the browser)
+main()
+```
 
 ---
 
-### **`save_results_to_csv(df, filename="results.csv")`**
-- **Purpose**: Saves analysis results to a CSV file.
-- **Parameters**:
-  - `df` *(pandas.DataFrame)*: DataFrame containing results.
-  - `filename` *(str)*: Name of the output file.
-- **Returns**: Path to the saved file.
-- **Example**:
-  ```python
-  results_df = pd.DataFrame([{"text": "example", "analysis": "unbiased"}])
-  save_path = save_results_to_csv(results_df, "output.csv")
-  print(save_path)
-  ```
+## **How to Use Fair-Sense-AI**
+
+### **1. Text Analysis**
+- Navigate to the **Text Analysis** tab in the Gradio interface.
+- Input or paste the text you want to analyze.
+- Click **Analyze** to detect and highlight biases.
+
+### **2. Image Analysis**
+- Navigate to the **Image Analysis** tab.
+- Upload an image to analyze for biases in embedded text or captions.
+- Click **Analyze** to view detailed results.
+
+### **3. Batch Text CSV Analysis**
+- Navigate to the **Batch Text CSV Analysis** tab.
+- Upload a CSV file with a column named `text`.
+- Click **Analyze CSV** to process and analyze all entries.
+
+### **4. Batch Image Analysis**
+- Navigate to the **Batch Image Analysis** tab.
+- Upload multiple images to analyze biases in captions or embedded text.
+- Click **Analyze Images** to view results.
+
+### **5. AI Governance Insights**
+- Navigate to the **AI Governance and Safety** tab.
+- Choose a predefined topic or input your own.
+- Click **Get Insights** for actionable recommendations.
 
 ---
 
-## **6. AI Governance**
+## **Troubleshooting**
 
-### **`ai_governance_response(prompt, progress=None)`**
-- **Purpose**: Provides insights into AI governance and safety.
-- **Parameters**:
-  - `prompt` *(str)*: Topic or question about AI governance.
-  - `progress` *(callable, optional)*: Progress tracker.
-- **Returns**: AI-generated insights and recommendations.
-- **Example**:
-  ```python
-  insights = ai_governance_response("Discuss AI ethics.")
-  print(insights)
-  ```
+### **Common Issues**
+
+- **Models Download Slowly**: On first use, models are downloaded automatically. Ensure you have a stable internet connection.
+- **Tesseract Not Found**: Verify Tesseract is installed and accessible in your system's PATH.
+- **GPU Support**: Install PyTorch with CUDA support if you want GPU acceleration.
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+```
 
 ---
 
-## **7. AI Safety Dashboard**
+## **Sample Data**
 
-### **`display_ai_safety_dashboard()`**
-- **Purpose**: Visualizes AI safety risks using interactive charts.
-- **Returns**: Tuple containing bar chart, pie chart, scatter plot, and DataFrame.
-- **Example**:
-  ```python
-  fig_bar, fig_pie, fig_scatter, risks_df = display_ai_safety_dashboard()
-  fig_bar.show()
-  ```
+- A sample CSV file with a `text` column.
+- Sample images for analysis.
 
 ---
 
-# Demo Video
+## **Contact**
 
-Watch the demonstration of the FairSense platform below:
+For inquiries or support, contact:  
+**Shaina Raza, PhD** , Applied ML Scientist, Responsible AI ,[shaina.raza@vectorinstitute.ai](mailto:shaina.raza@vectorinstitute.ai)
 
-<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
-        width="600" height="450" allow="autoplay"></iframe>
+---
 
+## **License**
 
+This project is licensed under the [Creative Commons License](https://creativecommons.org/licenses/).
 
-## **Next Steps**
-
-This documentation provides the foundation for integrating FairSense into your workflows. 
-**Contact**: For inquiries, collaborations, or feedback, connect with **Shaina Raza, PhD**,  at **shaina.raza@vectorinstitute.ai**.
-Let me know if you need anything else added! 😊
- 
-
+---
