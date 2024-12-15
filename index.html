@@ -42,71 +42,53 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a>
+    <li class="toctree-l2"><a class="reference internal" href="#installation-and-setup">Installation and Setup</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#text-analysis">📄 Text Analysis</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-install-fair-sense-ai">Step 1: Install Fair-Sense-AI</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#image-analysis">🖼️ Image Analysis</a>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-quickstart-code-examples">Step 2: Quickstart Code Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-text-bias-analysis">1. Text Bias Analysis</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#batch-processing">📂 Batch Processing</a>
+    <li class="toctree-l4"><a class="reference internal" href="#2-image-bias-analysis">2. Image Bias Analysis</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#ai-governance-insights">📜 AI Governance Insights</a>
+    <li class="toctree-l4"><a class="reference internal" href="#3-launch-the-interactive-application">3. Launch the Interactive Application</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#demo-video">Demo Video</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#usage-instructions">Usage Instructions</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#launch-the-application">Launch the Application</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#bias-detection-tutorial">Bias Detection Tutorial</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#setup">Setup</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#install-required-packages">Install Required Packages</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#code-examples">Code Examples</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#text-bias-analysis">Text Bias Analysis</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#image-bias-analysis">Image Bias Analysis</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#launch-the-interactive-application">Launch the Interactive Application</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-fair-sense-ai">How to Use Fair-Sense-AI</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#1-text-analysis">1. Text Analysis</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-image-analysis">2. Image Analysis</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-batch-text-csv-analysis">3. Batch Text CSV Analysis</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-batch-image-analysis">4. Batch Image Analysis</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-ai-governance-insights">5. AI Governance Insights</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#common-issues">Common Issues</a>
+    <li class="toctree-l3"><a class="reference internal" href="#data-and-sample-notebooks">Data and Sample Notebooks</a>
     </li>
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usage-instructions">Usage Instructions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#launching-the-application">Launching the Application</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#features">Features</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1-text-analysis">1. Text Analysis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#2-image-analysis">2. Image Analysis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#3-batch-text-csv-analysis">3. Batch Text CSV Analysis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#4-batch-image-analysis">4. Batch Image Analysis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#5-ai-governance-insights">5. AI Governance Insights</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-setup-in-colab">Additional Setup in Colab</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a>
     </li>
@@ -142,149 +124,79 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="fair-sense-ai"><strong>Fair-Sense-AI</strong></h1>
-<p>Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.</p>
-<p>📦 <a href="https://pypi.org/project/fair-sense-ai/">Fair-Sense-AI on PyPI</a></p>
+                <h1 id="fairsense-ai"><strong>FairSense-AI</strong></h1>
+<p>Fairsense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Built with sustainability in mind, it leverages energy-efficient AI frameworks to ensure an eco-friendly approach to tackling societal biases.</p>
 <hr />
-<h2 id="key-features"><strong>Key Features</strong></h2>
-<h3 id="text-analysis">📄 <strong>Text Analysis</strong></h3>
-<ul>
-<li>Detect and highlight biases within text, such as targeted language or stereotypes.</li>
-<li>Provide actionable feedback to improve the fairness of content.</li>
-</ul>
-<h3 id="image-analysis">🖼️ <strong>Image Analysis</strong></h3>
-<ul>
-<li>Extract embedded text from images and evaluate it for potential biases.</li>
-<li>Generate and assess image captions for fairness and inclusivity.</li>
-</ul>
-<h3 id="batch-processing">📂 <strong>Batch Processing</strong></h3>
-<ul>
-<li>Efficiently analyze large datasets of text or images.</li>
-<li>Automatically flag problematic patterns across datasets.</li>
-</ul>
-<h3 id="ai-governance-insights">📜 <strong>AI Governance Insights</strong></h3>
-<ul>
-<li>Gain insights into ethical AI practices and bias mitigation strategies.</li>
-<li>Explore topics such as data privacy, transparency, and responsible AI deployment.</li>
-</ul>
-<hr />
-<h2 id="demo-video"><strong>Demo Video</strong></h2>
-<p>Watch the demonstration of Fair-Sense-AI below:</p>
-<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
-        width="500" height="400" allow="autoplay"></iframe>
-
-<hr />
-<h2 id="installation"><strong>Installation</strong></h2>
-<p>Install Fair-Sense-AI using pip:</p>
-<pre><code class="language-bash">pip install fair-sense-ai
-</code></pre>
-<h3 id="dependencies"><strong>Dependencies</strong></h3>
-<p>Ensure the following prerequisites are met:
-1. Python 3.7+
-2. Tesseract OCR for image analysis (installation instructions below).</p>
-<hr />
-<h2 id="usage-instructions"><strong>Usage Instructions</strong></h2>
-<h3 id="launch-the-application"><strong>Launch the Application</strong></h3>
-<p>Run the following command to start Fair-Sense-AI:</p>
-<pre><code class="language-bash">fair-sense-ai
-</code></pre>
-<p>This will launch a Gradio-powered interface in your default web browser.</p>
-<hr />
-<h2 id="bias-detection-tutorial"><strong>Bias Detection Tutorial</strong></h2>
-<h3 id="setup"><strong>Setup</strong></h3>
-<ol>
-<li><strong>Download the Data</strong>:  </li>
-<li>Our dataset <a href="https://huggingface.co/datasets/vector-institute/newsmediabias-plus-clean">Newsmediabias-plus</a></li>
-<li>Download example datasets from <a href="https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing">this Google Drive link</a> to check. Upload the files to your environment (e.g., Jupyter Notebook, Google Colab, etc.).</li>
-<li>Example Google Colab notebook: <a href="https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing">Run the Tutorial</a>.</li>
-</ol>
-<h3 id="install-required-packages"><strong>Install Required Packages</strong></h3>
-<pre><code class="language-bash">pip install fair-sense-ai
-pip uninstall sympy -y
-pip install sympy --upgrade
-apt update
-apt install -y tesseract-ocr
+<h2 id="installation-and-setup"><strong>Installation and Setup</strong></h2>
+<h3 id="step-1-install-fair-sense-ai"><strong>Step 1: Install Fair-Sense-AI</strong></h3>
+<p>Install the Fair-Sense-AI package using pip:</p>
+<pre><code class="language-bash">pip install Fair-Sense-AI
 </code></pre>
 <hr />
-<h3 id="code-examples"><strong>Code Examples</strong></h3>
-<h4 id="text-bias-analysis"><strong>Text Bias Analysis</strong></h4>
+<h3 id="step-2-quickstart-code-examples"><strong>Step 2: Quickstart Code Examples</strong></h3>
+<h4 id="1-text-bias-analysis"><strong>1. Text Bias Analysis</strong></h4>
 <pre><code class="language-python">from fairsenseai import analyze_text_for_bias
 
-text_input = &quot;Women are better at multitasking than men.&quot;
+# Example input text to analyze for bias
+text_input = &quot;Men are naturally better at decision-making, while women excel at emotional tasks.&quot;
 
+# Analyze the text for bias
 highlighted_text, detailed_analysis = analyze_text_for_bias(text_input)
 
+# Print the analysis results
 print(&quot;Highlighted Text:&quot;, highlighted_text)
 print(&quot;Detailed Analysis:&quot;, detailed_analysis)
 </code></pre>
-<h4 id="image-bias-analysis"><strong>Image Bias Analysis</strong></h4>
-<pre><code class="language-python">from fairsenseai import analyze_image_for_bias
+<h4 id="2-image-bias-analysis"><strong>2. Image Bias Analysis</strong></h4>
+<pre><code class="language-python">import requests
 from PIL import Image
+from io import BytesIO
+from fairsenseai import analyze_image_for_bias
 
-image = Image.open(&quot;example_image.jpg&quot;)
+# URL of the image to analyze
+image_url = &quot;https://media.top1000funds.com/wp-content/uploads/2019/12/iStock-525807555.jpg&quot;
 
+# Fetch and load the image
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content))
+
+# Analyze the image for bias
 highlighted_caption, image_analysis = analyze_image_for_bias(image)
 
+# Print the analysis results
 print(&quot;Highlighted Caption:&quot;, highlighted_caption)
 print(&quot;Image Analysis:&quot;, image_analysis)
 </code></pre>
-<h4 id="launch-the-interactive-application"><strong>Launch the Interactive Application</strong></h4>
+<h4 id="3-launch-the-interactive-application"><strong>3. Launch the Interactive Application</strong></h4>
 <pre><code class="language-python">from fairsenseai import main
 
-main()  # Launches the Gradio interface in a browser
+# Launch the Gradio application (will open in the browser)
+main()
 </code></pre>
 <hr />
-<h2 id="how-to-use-fair-sense-ai"><strong>How to Use Fair-Sense-AI</strong></h2>
-<h3 id="1-text-analysis"><strong>1. Text Analysis</strong></h3>
-<ul>
-<li>Input text into the <strong>Text Analysis</strong> tab of the Gradio interface.</li>
-<li>Click <strong>Analyze</strong> to detect and highlight biases.</li>
-</ul>
-<h3 id="2-image-analysis"><strong>2. Image Analysis</strong></h3>
-<ul>
-<li>Upload an image in the <strong>Image Analysis</strong> tab.</li>
-<li>Click <strong>Analyze</strong> to evaluate biases in captions or embedded text.</li>
-</ul>
-<h3 id="3-batch-text-csv-analysis"><strong>3. Batch Text CSV Analysis</strong></h3>
-<ul>
-<li>Upload a CSV file with a <code>text</code> column.</li>
-<li>Click <strong>Analyze CSV</strong> to process and flag all entries.</li>
-</ul>
-<h3 id="4-batch-image-analysis"><strong>4. Batch Image Analysis</strong></h3>
-<ul>
-<li>Upload multiple images in the <strong>Batch Image Analysis</strong> tab.</li>
-<li>Click <strong>Analyze Images</strong> to view results.</li>
-</ul>
-<h3 id="5-ai-governance-insights"><strong>5. AI Governance Insights</strong></h3>
-<ul>
-<li>Navigate to the <strong>AI Governance and Safety</strong> tab.</li>
-<li>Select a predefined topic or input your own.</li>
-<li>Click <strong>Get Insights</strong> for detailed recommendations.</li>
-</ul>
-<hr />
-<h2 id="troubleshooting"><strong>Troubleshooting</strong></h2>
-<h3 id="common-issues"><strong>Common Issues</strong></h3>
-<ul>
+<h2 id="bias-detection-tutorial"><strong>Bias Detection Tutorial</strong></h2>
+<h3 id="data-and-sample-notebooks"><strong>Data and Sample Notebooks</strong></h3>
+<ol>
 <li>
-<p><strong>Slow Model Downloads</strong>:<br />
-  First-time users may experience slow downloads. Ensure a stable internet connection.</p>
+<p><strong>Download the Data</strong>:<br />
+<a href="https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing">Google Drive Link</a></p>
 </li>
 <li>
-<p><strong>Tesseract Missing</strong>:<br />
-  Verify Tesseract is installed and accessible in your system's PATH.</p>
+<p><strong>Colab Notebook</strong>:<br />
+<a href="https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing">Run the Tutorial</a></p>
 </li>
-<li>
-<p><strong>GPU Acceleration</strong>:<br />
-  Install PyTorch with CUDA support for faster processing.</p>
-</li>
-</ul>
-<pre><code class="language-bash">pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-</code></pre>
+</ol>
 <hr />
 <h2 id="prerequisites"><strong>Prerequisites</strong></h2>
 <ol>
-<li><strong>Python 3.7+</strong>: Download <a href="https://www.python.org/downloads/">here</a>.</li>
-<li><strong>Tesseract OCR</strong>: Required for image text extraction.</li>
+<li>
+<p><strong>Python 3.7+</strong><br />
+   Ensure Python is installed. Download it <a href="https://www.python.org/downloads/">here</a>.</p>
+</li>
+<li>
+<p><strong>Tesseract OCR</strong><br />
+   Required for extracting text from images.</p>
+</li>
 </ol>
 <p>#### Installation Instructions:
    - <strong>Ubuntu</strong>:
@@ -294,14 +206,81 @@ main()  # Launches the Gradio interface in a browser
    - <strong>macOS (Homebrew)</strong>:
      <code>bash
      brew install tesseract</code>
-   - <strong>Windows</strong>:
-     Download Tesseract OCR from <a href="https://github.com/UB-Mannheim/tesseract/wiki">this link</a>.</p>
+   - <strong>Windows</strong>:<br />
+     Download and install Tesseract OCR from <a href="https://github.com/UB-Mannheim/tesseract/wiki">this link</a>.</p>
+<ol>
+<li><strong>Optional (GPU Acceleration)</strong><br />
+   Install PyTorch with CUDA support:</li>
+</ol>
+<p><code>bash
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117</code></p>
+<hr />
+<h2 id="usage-instructions"><strong>Usage Instructions</strong></h2>
+<h3 id="launching-the-application"><strong>Launching the Application</strong></h3>
+<p>Run the following command to start Fair-Sense-AI:</p>
+<pre><code class="language-bash">Fair-Sense-AI
+</code></pre>
+<p>This will launch the Gradio-powered interface in your default web browser.</p>
+<hr />
+<h3 id="features"><strong>Features</strong></h3>
+<h4 id="1-text-analysis"><strong>1. Text Analysis</strong></h4>
+<ul>
+<li>Input or paste text in the <strong>Text Analysis</strong> tab.</li>
+<li>Click <strong>Analyze</strong> to detect and highlight biases.</li>
+</ul>
+<h4 id="2-image-analysis"><strong>2. Image Analysis</strong></h4>
+<ul>
+<li>Upload an image in the <strong>Image Analysis</strong> tab.</li>
+<li>Click <strong>Analyze</strong> to detect biases in embedded text or captions.</li>
+</ul>
+<h4 id="3-batch-text-csv-analysis"><strong>3. Batch Text CSV Analysis</strong></h4>
+<ul>
+<li>Upload a CSV file with a <code>text</code> column in the <strong>Batch Text CSV Analysis</strong> tab.</li>
+<li>Click <strong>Analyze CSV</strong> to process all entries.</li>
+</ul>
+<h4 id="4-batch-image-analysis"><strong>4. Batch Image Analysis</strong></h4>
+<ul>
+<li>Upload multiple images in the <strong>Batch Image Analysis</strong> tab.</li>
+<li>Click <strong>Analyze Images</strong> for a detailed review.</li>
+</ul>
+<h4 id="5-ai-governance-insights"><strong>5. AI Governance Insights</strong></h4>
+<ul>
+<li>Navigate to the <strong>AI Governance and Safety</strong> tab.</li>
+<li>Choose a predefined topic or input your own query.</li>
+<li>Click <strong>Get Insights</strong> for recommendations.</li>
+</ul>
+<hr />
+<h3 id="additional-setup-in-colab"><strong>Additional Setup in Colab</strong></h3>
+<p>Run the following commands to ensure everything is ready:</p>
+<pre><code class="language-bash">!pip install --quiet fair-sense-ai
+!pip uninstall sympy -y
+!pip install sympy --upgrade
+!apt update
+!apt install -y tesseract-ocr
+</code></pre>
+<p><strong>Note</strong>: Restart your system if you're using Google Colab.</p>
+<hr />
+<h2 id="troubleshooting"><strong>Troubleshooting</strong></h2>
+<ul>
+<li>
+<p><strong>Slow Model Download</strong>:<br />
+  Ensure a stable internet connection for downloading models.</p>
+</li>
+<li>
+<p><strong>Tesseract OCR Errors</strong>:<br />
+  Verify Tesseract is installed and accessible in your system's PATH.</p>
+</li>
+<li>
+<p><strong>GPU Support</strong>:<br />
+  Use the CUDA-compatible version of PyTorch for better performance.</p>
+</li>
+</ul>
 <hr />
 <h2 id="contact"><strong>Contact</strong></h2>
 <p>For inquiries or support, contact:<br />
 <strong>Shaina Raza, PhD</strong><br />
 Applied ML Scientist, Responsible AI<br />
-<a href="mailto:shaina.raza@vectorinstitute.ai">shaina.raza@vectorinstitute.ai</a></p>
+<a href="mailto:shaina.raza@torontomu.ca">shaina.raza@vectorinstitute.ai</a></p>
 <hr />
 <h2 id="license"><strong>License</strong></h2>
 <p>This project is licensed under the <a href="https://creativecommons.org/licenses/">Creative Commons License</a>.</p>
@@ -354,5 +333,5 @@ Applied ML Scientist, Responsible AI<br />
 
 <!--
 MkDocs version : 1.6.0
-Build Date UTC : 2024-12-05 13:51:17.055446+00:00
+Build Date UTC : 2024-12-15 20:55:28.670503+00:00
 -->
