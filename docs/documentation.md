@@ -1,9 +1,9 @@
-# **FairSense API Documentation**
+# **FairSense-AI API Documentation**
 
 ---
 ## **Introduction**
 
-FairSense is an AI-driven platform for detecting and analyzing bias in textual and visual content. This document outlines the key functions and APIs provided by FairSense for integration and usage.
+FairSense-AI is an AI-driven platform for detecting and analyzing bias in textual and visual content. This document outlines the key functions and APIs provided by FairSense for integration and usage.
 We are releasing a multimodal bias detection toolkit
 
 ---

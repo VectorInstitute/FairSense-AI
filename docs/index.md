@@ -1,180 +1,92 @@
-# **Fair-Sense-AI**
 
-Fair-Sense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Whether you're addressing societal biases, identifying disinformation, or fostering responsible AI practices, Fair-Sense-AI equips you with the tools to make informed decisions.
+# **FairSense-AI**
 
-📦 [Fair-Sense-AI on PyPI](https://pypi.org/project/fair-sense-ai/)
-
----
-
-## **Key Features**
-
-### 📄 **Text Analysis**
-- Detect and highlight biases within text, such as targeted language or stereotypes.
-- Provide actionable feedback to improve the fairness of content.
-
-### 🖼️ **Image Analysis**
-- Extract embedded text from images and evaluate it for potential biases.
-- Generate and assess image captions for fairness and inclusivity.
-
-### 📂 **Batch Processing**
-- Efficiently analyze large datasets of text or images.
-- Automatically flag problematic patterns across datasets.
-
-### 📜 **AI Governance Insights**
-- Gain insights into ethical AI practices and bias mitigation strategies.
-- Explore topics such as data privacy, transparency, and responsible AI deployment.
+Fairsense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Built with sustainability in mind, it leverages energy-efficient AI frameworks to ensure an eco-friendly approach to tackling societal biases.
 
 ---
 
-## **Demo Video**
+## **Installation and Setup**
 
-Watch the demonstration of Fair-Sense-AI below:
+### **Step 1: Install Fair-Sense-AI**
 
-<iframe src="https://drive.google.com/file/d/1B0GhvxbJ_dR8xhruOK5cEa_DApTC_xmo/preview" 
-        width="500" height="400" allow="autoplay"></iframe>
-
----
-
-## **Installation**
-
-Install Fair-Sense-AI using pip:
+Install the Fair-Sense-AI package using pip:
 
 ```bash
-pip install fair-sense-ai
-```
-
-### **Dependencies**
-Ensure the following prerequisites are met:
-1. Python 3.7+
-2. Tesseract OCR for image analysis (installation instructions below).
-
----
-
-## **Usage Instructions**
-
-### **Launch the Application**
-
-Run the following command to start Fair-Sense-AI:
-
-```bash
-fair-sense-ai
-```
-
-This will launch a Gradio-powered interface in your default web browser.
-
----
-
-## **Bias Detection Tutorial**
-
-### **Setup**
-
-1. **Download the Data**:  
-   - Our dataset [Newsmediabias-plus](https://huggingface.co/datasets/vector-institute/newsmediabias-plus-clean)
-   - Download example datasets from [this Google Drive link](https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing) to check. Upload the files to your environment (e.g., Jupyter Notebook, Google Colab, etc.).
-2. Example Google Colab notebook: [Run the Tutorial](https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing).
-
-
-### **Install Required Packages**
-
-```bash
-pip install fair-sense-ai
-pip uninstall sympy -y
-pip install sympy --upgrade
-apt update
-apt install -y tesseract-ocr
+pip install Fair-Sense-AI
 ```
 
 ---
 
-### **Code Examples**
+### **Step 2: Quickstart Code Examples**
 
-#### **Text Bias Analysis**
+#### **1. Text Bias Analysis**
 
 ```python
 from fairsenseai import analyze_text_for_bias
 
-text_input = "Women are better at multitasking than men."
+# Example input text to analyze for bias
+text_input = "Men are naturally better at decision-making, while women excel at emotional tasks."
 
+# Analyze the text for bias
 highlighted_text, detailed_analysis = analyze_text_for_bias(text_input)
 
+# Print the analysis results
 print("Highlighted Text:", highlighted_text)
 print("Detailed Analysis:", detailed_analysis)
 ```
 
-#### **Image Bias Analysis**
+#### **2. Image Bias Analysis**
 
 ```python
-from fairsenseai import analyze_image_for_bias
+import requests
 from PIL import Image
+from io import BytesIO
+from fairsenseai import analyze_image_for_bias
 
-image = Image.open("example_image.jpg")
+# URL of the image to analyze
+image_url = "https://media.top1000funds.com/wp-content/uploads/2019/12/iStock-525807555.jpg"
 
+# Fetch and load the image
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content))
+
+# Analyze the image for bias
 highlighted_caption, image_analysis = analyze_image_for_bias(image)
 
+# Print the analysis results
 print("Highlighted Caption:", highlighted_caption)
 print("Image Analysis:", image_analysis)
 ```
 
-#### **Launch the Interactive Application**
+#### **3. Launch the Interactive Application**
 
 ```python
 from fairsenseai import main
 
-main()  # Launches the Gradio interface in a browser
+# Launch the Gradio application (will open in the browser)
+main()
 ```
 
 ---
+## **Bias Detection Tutorial**
 
-## **How to Use Fair-Sense-AI**
+### **Data and Sample Notebooks**
 
-### **1. Text Analysis**
-- Input text into the **Text Analysis** tab of the Gradio interface.
-- Click **Analyze** to detect and highlight biases.
+1. **Download the Data**:  
+   [Google Drive Link](https://drive.google.com/drive/folders/1_D7lTz-TC6yhV7xsZIDzk-tJvl4TAwyi?usp=sharing)
 
-### **2. Image Analysis**
-- Upload an image in the **Image Analysis** tab.
-- Click **Analyze** to evaluate biases in captions or embedded text.
-
-### **3. Batch Text CSV Analysis**
-- Upload a CSV file with a `text` column.
-- Click **Analyze CSV** to process and flag all entries.
-
-### **4. Batch Image Analysis**
-- Upload multiple images in the **Batch Image Analysis** tab.
-- Click **Analyze Images** to view results.
-
-### **5. AI Governance Insights**
-- Navigate to the **AI Governance and Safety** tab.
-- Select a predefined topic or input your own.
-- Click **Get Insights** for detailed recommendations.
+2. **Colab Notebook**:  
+   [Run the Tutorial](https://colab.research.google.com/drive/1en8JtZTAIa5MuV5OZWYNteYl95Ql9xy7?usp=sharing)
 
 ---
-
-## **Troubleshooting**
-
-### **Common Issues**
-
-- **Slow Model Downloads**:  
-  First-time users may experience slow downloads. Ensure a stable internet connection.
-
-- **Tesseract Missing**:  
-  Verify Tesseract is installed and accessible in your system's PATH.
-
-- **GPU Acceleration**:  
-  Install PyTorch with CUDA support for faster processing.
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
-```
-
----
-
-
 
 ## **Prerequisites**
 
-1. **Python 3.7+**: Download [here](https://www.python.org/downloads/).
-2. **Tesseract OCR**: Required for image text extraction.
+1. **Python 3.7+**  
+   Ensure Python is installed. Download it [here](https://www.python.org/downloads/).
+
+2. **Tesseract OCR**  
+   Required for extracting text from images.
 
    #### Installation Instructions:
    - **Ubuntu**:
@@ -186,8 +98,85 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
      ```bash
      brew install tesseract
      ```
-   - **Windows**:
-     Download Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
+   - **Windows**:  
+     Download and install Tesseract OCR from [this link](https://github.com/UB-Mannheim/tesseract/wiki).
+
+3. **Optional (GPU Acceleration)**  
+   Install PyTorch with CUDA support:
+
+   ```bash
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+   ```
+
+---
+
+## **Usage Instructions**
+
+### **Launching the Application**
+
+Run the following command to start Fair-Sense-AI:
+
+```bash
+Fair-Sense-AI
+```
+
+This will launch the Gradio-powered interface in your default web browser.
+
+---
+
+### **Features**
+
+#### **1. Text Analysis**
+- Input or paste text in the **Text Analysis** tab.
+- Click **Analyze** to detect and highlight biases.
+
+#### **2. Image Analysis**
+- Upload an image in the **Image Analysis** tab.
+- Click **Analyze** to detect biases in embedded text or captions.
+
+#### **3. Batch Text CSV Analysis**
+- Upload a CSV file with a `text` column in the **Batch Text CSV Analysis** tab.
+- Click **Analyze CSV** to process all entries.
+
+#### **4. Batch Image Analysis**
+- Upload multiple images in the **Batch Image Analysis** tab.
+- Click **Analyze Images** for a detailed review.
+
+#### **5. AI Governance Insights**
+- Navigate to the **AI Governance and Safety** tab.
+- Choose a predefined topic or input your own query.
+- Click **Get Insights** for recommendations.
+
+---
+
+
+
+### **Additional Setup in Colab**
+
+Run the following commands to ensure everything is ready:
+
+```bash
+!pip install --quiet fair-sense-ai
+!pip uninstall sympy -y
+!pip install sympy --upgrade
+!apt update
+!apt install -y tesseract-ocr
+```
+
+**Note**: Restart your system if you're using Google Colab.
+
+---
+
+## **Troubleshooting**
+
+- **Slow Model Download**:  
+  Ensure a stable internet connection for downloading models.
+
+- **Tesseract OCR Errors**:  
+  Verify Tesseract is installed and accessible in your system's PATH.
+
+- **GPU Support**:  
+  Use the CUDA-compatible version of PyTorch for better performance.
 
 ---
 
@@ -196,7 +185,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 For inquiries or support, contact:  
 **Shaina Raza, PhD**  
 Applied ML Scientist, Responsible AI  
-[shaina.raza@vectorinstitute.ai](mailto:shaina.raza@vectorinstitute.ai)
+[shaina.raza@vectorinstitute.ai](mailto:shaina.raza@torontomu.ca)
 
 ---
 
@@ -205,4 +194,4 @@ Applied ML Scientist, Responsible AI
 This project is licensed under the [Creative Commons License](https://creativecommons.org/licenses/).
 
 ---
- 
+
