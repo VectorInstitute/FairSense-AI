@@ -1,7 +1,7 @@
 
 # **FairSense-AI**
 
-Fairsense-AI is a cutting-edge, AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Built with sustainability in mind, it leverages energy-efficient AI frameworks to ensure an eco-friendly approach to tackling societal biases.
+Fairsense-AI is a state of the art AI-driven platform designed to promote transparency, fairness, and equity by analyzing bias in textual and visual content. Built with sustainability in mind, it leverages energy-efficient AI frameworks to ensure an eco-friendly approach to tackling societal biases.
 
 [FairSense-AI on PyPI](https://pypi.org/project/fair-sense-ai/)  
 
