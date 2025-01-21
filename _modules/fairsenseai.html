@@ -1,0 +1,1502 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark">
+    <meta name="google-site-verification" content="i0qQRaR9OA3tSz_9tDocdcXGY27Ox_cy4FrvTHD2C_0" />
+    
+      <meta name="description" content="aieng-template Python API documentation">
+    <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
+
+    <meta name="generator" content="sphinx-7.4.7, furo 2024.08.06"/>
+
+    
+    <meta name="msvalidate.01" content="8D2A5032F006424CAF54C0DDCD16F666" />
+      
+        <title>fairsenseai - FairSense AI</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=302659d7" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #faad1a;
+  --color-brand-content: #eb088a;
+  --color-foreground-secondary: #52c7de;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-brand-primary: #faad1a;
+  --color-brand-content: #eb088a;
+  --color-foreground-secondary: #52c7de;
+  
+      }
+    }
+  }
+</style><script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=ccdb6887"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/require.min.js?v=53367eec"></script>
+    <script src="../_static/custom.js?v=275847af"></script>
+    
+    <script src="https://kit.fontawesome.com/2c1f516901.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">FairSense AI</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">FairSense AI</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart Code Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Bias Detection Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage_instructions.html">Usage Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/fairsenseai.analyze_bias.html">Bias Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/fairsenseai.ai_governance.html">AI Governance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/api/fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <h1>Source code for fairsenseai</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABCMeta</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">TextIO</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cv2</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gradio</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gr</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ollama</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytesseract</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">plotly.graph_objs</span><span class="w"> </span><span class="kn">import</span> <span class="n">Figure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AutoTokenizer</span><span class="p">,</span>
+    <span class="n">AutoModelForCausalLM</span><span class="p">,</span>
+    <span class="n">BlipProcessor</span><span class="p">,</span>
+    <span class="n">BlipForConditionalGeneration</span><span class="p">,</span>
+    <span class="n">pipeline</span>
+<span class="p">)</span>
+
+<span class="c1"># Set up logging</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FairsenseRuntime</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Base abstract class for runtime, containing common logic</span>
+<span class="sd">    for model loading and usage.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">ABCMeta</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blip_model_id</span> <span class="o">=</span> <span class="s2">&quot;Salesforce/blip-image-captioning-base&quot;</span>
+
+        <span class="c1"># Load Models</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading models...&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Image Captioning</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blip_processor</span> <span class="o">=</span> <span class="n">BlipProcessor</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blip_model_id</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blip_model</span> <span class="o">=</span> <span class="n">BlipForConditionalGeneration</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">blip_model_id</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+            <span class="c1"># Summarizer for post-processing</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">summarizer</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span>
+                <span class="s2">&quot;summarization&quot;</span><span class="p">,</span>
+                <span class="n">model</span><span class="o">=</span><span class="s2">&quot;sshleifer/distilbart-cnn-12-6&quot;</span><span class="p">,</span>
+                <span class="n">device</span><span class="o">=</span><span class="mi">0</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="p">)</span>
+
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Models loaded successfully.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error loading models: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_directory</span> <span class="o">=</span> <span class="s2">&quot;bias-results&quot;</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">default_directory</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1"># Expanded AI Safety Risks Data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ai_safety_risks</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Disinformation Spread&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Information Integrity&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;High&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI-generated content can spread false information rapidly.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Develop AI tools for fact-checking and verification.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Algorithmic Bias&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Fairness and Bias&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;High&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI systems may perpetuate or amplify societal biases.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Implement fairness-aware algorithms and diverse datasets.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Privacy Invasion&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Data Privacy&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI can infer personal information without consent.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Adopt privacy-preserving techniques like differential privacy.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Lack of Transparency&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Explainability&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Complex models can be opaque, making decisions hard to understand.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Use explainable AI methods to increase transparency.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Security Vulnerabilities&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Robustness&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI systems may be susceptible to adversarial attacks.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Employ robust training methods and continuous monitoring.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Job Displacement&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Economic Impact&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;High&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Automation may lead to loss of jobs in certain sectors.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Promote reskilling and education programs.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Ethical Dilemmas&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Ethics&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Medium&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI may make decisions conflicting with human values.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Incorporate ethical guidelines into AI development.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Autonomous Weapons&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Physical Safety&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Critical&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI could be used in weapons without human oversight.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Establish international regulations and oversight.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Environmental Impact&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Sustainability&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;Low&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;High energy consumption in AI training affects the environment.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Optimize models and use renewable energy sources.&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Risk&quot;</span><span class="p">:</span> <span class="s2">&quot;Misuse for Surveillance&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Category&quot;</span><span class="p">:</span> <span class="s2">&quot;Human Rights&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Percentage&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;Severity&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s2">&quot;Likelihood&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s2">&quot;Impact&quot;</span><span class="p">:</span> <span class="s2">&quot;High&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;AI can be used for mass surveillance violating privacy rights.&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Mitigation&quot;</span><span class="p">:</span> <span class="s2">&quot;Enforce laws protecting individual privacy.&quot;</span>
+            <span class="p">},</span>
+        <span class="p">]</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">predict_with_text_model</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Abstract method to predict text using the underlying model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        prompt</span>
+<span class="sd">            The input prompt for the text model.</span>
+<span class="sd">        progress</span>
+<span class="sd">            A callback function to report progress.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        str</span>
+<span class="sd">            The generated text response.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FairsenseGPURuntime</span><span class="p">(</span><span class="n">FairsenseRuntime</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    GPU runtime class for Fairsense.</span>
+<span class="sd">    Loads and runs a Hugging Face model locally on GPU.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_model_hf_id</span> <span class="o">=</span> <span class="s2">&quot;unsloth/Llama-3.2-1B-Instruct&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">text_model_hf_id</span><span class="p">,</span> <span class="n">use_fast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">add_special_tokens</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;eos_token&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;/s&gt;&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;bos_token&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;s&gt;&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;unk_token&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;unk&gt;&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;pad_token&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;pad&gt;&#39;</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_model</span> <span class="o">=</span> <span class="n">AutoModelForCausalLM</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">text_model_hf_id</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_model</span><span class="o">.</span><span class="n">resize_token_embeddings</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="p">))</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">predict_with_text_model</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">max_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">,</span>
+        <span class="n">max_new_tokens</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span>  <span class="c1"># Allow enough tokens for full response</span>
+        <span class="n">temperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="n">num_beams</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">repetition_penalty</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">,</span>
+        <span class="n">do_sample</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">early_stopping</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;Tokenizing prompt...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Tokenize the input prompt</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="p">(</span>
+            <span class="n">prompt</span><span class="p">,</span>
+            <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">,</span>
+            <span class="n">padding</span><span class="o">=</span><span class="s2">&quot;max_length&quot;</span><span class="p">,</span>
+            <span class="n">truncation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">max_length</span><span class="o">=</span><span class="n">max_length</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;Generating response...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Generate output with safety checks</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">text_model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+                <span class="n">input_ids</span><span class="o">=</span><span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;input_ids&quot;</span><span class="p">],</span>
+                <span class="n">attention_mask</span><span class="o">=</span><span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;attention_mask&quot;</span><span class="p">],</span>
+                <span class="n">max_new_tokens</span><span class="o">=</span><span class="n">max_new_tokens</span><span class="p">,</span>
+                <span class="n">eos_token_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">eos_token_id</span><span class="p">,</span>
+                <span class="n">pad_token_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">pad_token_id</span><span class="p">,</span>
+                <span class="n">temperature</span><span class="o">=</span><span class="n">temperature</span><span class="p">,</span>
+                <span class="n">num_beams</span><span class="o">=</span><span class="n">num_beams</span><span class="p">,</span>
+                <span class="n">do_sample</span><span class="o">=</span><span class="n">do_sample</span><span class="p">,</span>
+                <span class="n">repetition_penalty</span><span class="o">=</span><span class="n">repetition_penalty</span><span class="p">,</span>
+                <span class="n">early_stopping</span><span class="o">=</span><span class="n">early_stopping</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="s2">&quot;Decoding output...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Decode the generated tokens</span>
+        <span class="n">start_index</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">[</span><span class="s2">&quot;input_ids&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span>
+            <span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">start_index</span><span class="p">:],</span> <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="c1"># Handle incomplete responses</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">response</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">response</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s2">&quot;.!?&quot;</span><span class="p">:</span>
+            <span class="n">warning_message</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="s2">&quot;&lt;span style=&#39;color: black; font-style: italic;&#39;&gt;&quot;</span>
+                <span class="s2">&quot;(Note: The response is concise. Adjust `max_new_tokens` for additional details.)&quot;</span>
+                <span class="s2">&quot;&lt;/span&gt;&quot;</span>
+            <span class="p">)</span>
+            <span class="n">response</span> <span class="o">+=</span> <span class="n">warning_message</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">FairsenseCPURuntime</span><span class="p">(</span><span class="n">FairsenseRuntime</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    CPU runtime class for Fairsense.</span>
+<span class="sd">    Uses Ollama to interface with local Llama-based models.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">text_model_hf_id</span> <span class="o">=</span> <span class="s2">&quot;llama3.2&quot;</span>  <span class="c1"># from ollama</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ollama_client</span> <span class="o">=</span> <span class="n">ollama</span><span class="o">.</span><span class="n">Client</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">predict_with_text_model</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;Preparing prompt...&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;Generating response...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Generate response using Ollama</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ollama_client</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span>
+            <span class="n">model</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">text_model_hf_id</span><span class="p">,</span>
+            <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="n">prompt</span><span class="p">}],</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="s2">&quot;Processing response...&quot;</span><span class="p">)</span>
+
+        <span class="n">generated_text</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;message&quot;</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">generated_text</span>
+
+
+<span class="n">FAIRSENSE_RUNTIME</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">FairsenseRuntime</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initialize the global FAIRSENSE_RUNTIME with GPU if available;</span>
+<span class="sd">    otherwise fallback to CPU runtime.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">FAIRSENSE_RUNTIME</span>
+    <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">():</span>
+        <span class="n">FAIRSENSE_RUNTIME</span> <span class="o">=</span> <span class="n">FairsenseGPURuntime</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">FAIRSENSE_RUNTIME</span> <span class="o">=</span> <span class="n">FairsenseCPURuntime</span><span class="p">()</span>
+
+
+<span class="c1"># Helper Functions</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">post_process_response</span><span class="p">(</span><span class="n">response</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Post-processes the response by optionally summarizing if the text is long</span>
+<span class="sd">    and returning formatted HTML.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    response</span>
+<span class="sd">        The generated response text.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The post-processed response with HTML formatting.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">cleaned_response</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+
+    <span class="c1"># Only summarize if the checkbox is enabled and the text is long</span>
+    <span class="k">if</span> <span class="n">use_summarizer</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">cleaned_response</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">summary</span> <span class="o">=</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">summarizer</span><span class="p">(</span>
+                <span class="n">cleaned_response</span><span class="p">,</span>
+                <span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+                <span class="n">min_length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                <span class="n">do_sample</span><span class="o">=</span><span class="kc">False</span>
+            <span class="p">)</span>
+            <span class="n">cleaned_response</span> <span class="o">=</span> <span class="n">summary</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;summary_text&#39;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">cleaned_response</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Error during summarization: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="se">\n</span><span class="s2">Original response: </span><span class="si">{</span><span class="n">cleaned_response</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="c1"># Clean up text into sentences</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">sentence</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">cleaned_response</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)]</span>
+    <span class="n">cleaned_response</span> <span class="o">=</span> <span class="s1">&#39;. &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">+</span> <span class="p">(</span>
+        <span class="s1">&#39;.&#39;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">cleaned_response</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;strong&gt;Here is the analysis:&lt;/strong&gt; </span><span class="si">{</span><span class="n">cleaned_response</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">highlight_bias</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">bias_words</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>  <span class="c1">#Move to utils/format.py</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Highlights bias words in the text with inline HTML styling.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">bias_words</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;div&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">bias_words</span><span class="p">:</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+            <span class="n">word</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s2">&quot;&lt;span style=&#39;color: red; font-weight: bold;&#39;&gt;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&lt;/span&gt;&quot;</span>
+        <span class="p">)</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&lt;div&gt;</span><span class="si">{</span><span class="n">text</span><span class="si">}</span><span class="s2">&lt;/div&gt;&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_response_with_model</span><span class="p">(</span>                     <span class="c1">#Move to utils/generate.py</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Higher-level function that calls the configured runtime to generate a response.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">predict_with_text_model</span><span class="p">(</span><span class="n">prompt</span><span class="p">,</span> <span class="n">progress</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">progress</span><span class="p">:</span>
+            <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Error occurred&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error generating response: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># Governance and Safety</span>
+<div class="viewcode-block" id="ai_governance_response">
+<a class="viewcode-back" href="../reference/api/fairsenseai.ai_governance.html#fairsenseai.ai_governance_response">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ai_governance_response</span><span class="p">(</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>  <span class="c1"># &lt;-- Summarizer toggle</span>
+    <span class="n">progress</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generates insights and recommendations on AI governance and safety topics.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    prompt</span>
+<span class="sd">        The input topic or question on AI governance and safety.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    progress</span>
+<span class="sd">        A callback function to report progress.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The generated response with insights and recommendations on AI Governance and Safety.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; ai_governance_response(&quot;Environment Impact of AI&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response_with_model</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Provide insights and recommendations on the following AI governance and safety topic:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">progress</span><span class="o">=</span><span class="n">progress</span>
+    <span class="p">)</span>
+    <span class="c1"># Use summarizer toggle</span>
+    <span class="k">return</span> <span class="n">post_process_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="analyze_text_for_bias">
+<a class="viewcode-back" href="../reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_text_for_bias">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_text_for_bias</span><span class="p">(</span>
+    <span class="n">text_input</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">progress</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">Progress</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Progress</span><span class="p">()</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyzes a given text for bias and provides a detailed analysis.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    text_input</span>
+<span class="sd">        The input text to analyze for bias.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    progress</span>
+<span class="sd">        A callback function to report progress.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Tuple[str, str]</span>
+<span class="sd">        A tuple containing the highlighted text with bias words and the detailed analysis.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; highlighted, analysis = analyze_text_for_bias(&quot;This text may contain bias.&quot;, use_summarizer=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">progress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Initializing analysis...&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>  <span class="c1"># Simulate delay for initializing</span>
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;Preparing analysis...&quot;</span><span class="p">)</span>
+
+        <span class="n">prompt</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Analyze the following text for bias. Be concise, focusing only on relevant details. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Mention specific phrases or language that contribute to bias, and describe the tone of the text. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Mention who is the targeted group (if any). &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Provide your response as a clear and concise paragraph. If no bias is found, state that the text appears unbiased.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Text: </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">text_input</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;Generating response...&quot;</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response_with_model</span><span class="p">(</span>
+            <span class="n">prompt</span><span class="p">,</span>
+            <span class="n">progress</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">progress</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">desc</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.7</span><span class="p">,</span> <span class="s2">&quot;Post-processing response...&quot;</span><span class="p">)</span>
+        <span class="n">processed_response</span> <span class="o">=</span> <span class="n">post_process_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;Highlighting text bias...&quot;</span><span class="p">)</span>
+        <span class="n">bias_section</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;Biased words:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;Biased words:&quot;</span> <span class="ow">in</span> <span class="n">response</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">biased_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">bias_section</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span> <span class="k">if</span> <span class="n">bias_section</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="n">highlighted_text</span> <span class="o">=</span> <span class="n">highlight_bias</span><span class="p">(</span><span class="n">text_input</span><span class="p">,</span> <span class="n">biased_words</span><span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Analysis complete.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">highlighted_text</span><span class="p">,</span> <span class="n">processed_response</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Analysis failed.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">preprocess_image</span><span class="p">(</span><span class="n">image</span><span class="p">:</span> <span class="n">Image</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>              <span class="c1">#Move to utils/image.py</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Preprocesses the image for OCR and captioning.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">gray</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">image</span><span class="p">),</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2GRAY</span><span class="p">)</span>
+    <span class="n">blurred</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">medianBlur</span><span class="p">(</span><span class="n">gray</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">blurred</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_GRAY2RGB</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="analyze_image_for_bias">
+<a class="viewcode-back" href="../reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_image_for_bias">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_image_for_bias</span><span class="p">(</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">Image</span><span class="p">,</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+    <span class="n">progress</span><span class="o">=</span><span class="n">gr</span><span class="o">.</span><span class="n">Progress</span><span class="p">()</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyzes an image for bias by extracting text using OCR and by generating image caption.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    image</span>
+<span class="sd">        The input image to analyze for bias.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    progress</span>
+<span class="sd">        A callback function to report progress.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Tuple[str, str]</span>
+<span class="sd">        A tuple containing the highlighted text with bias words and the detailed analysis.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; image = Image.open(&quot;example.jpg&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; highlighted, analysis = analyze_image_for_bias(image, use_summarizer=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">progress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Initializing image analysis...&quot;</span><span class="p">)</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Simulate delay</span>
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="s2">&quot;Processing image...&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Ensure RGB</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Prepare inputs for BLIP</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">blip_processor</span><span class="p">(</span><span class="n">images</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;Extracting text from image...&quot;</span><span class="p">)</span>
+        <span class="n">preprocessed_image</span> <span class="o">=</span> <span class="n">preprocess_image</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="n">extracted_text</span> <span class="o">=</span> <span class="n">pytesseract</span><span class="o">.</span><span class="n">image_to_string</span><span class="p">(</span><span class="n">preprocessed_image</span><span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span> <span class="s2">&quot;Generating caption...&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">caption_ids</span> <span class="o">=</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">blip_model</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span>
+                <span class="o">**</span><span class="n">inputs</span><span class="p">,</span>
+                <span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span>
+                <span class="n">num_beams</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span>
+            <span class="p">)</span>
+        <span class="n">caption_text</span> <span class="o">=</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">blip_processor</span><span class="o">.</span><span class="n">tokenizer</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span>
+            <span class="n">caption_ids</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">skip_special_tokens</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+        <span class="n">combined_text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">caption_text</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">extracted_text</span><span class="si">}</span><span class="s2">&quot;</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="s2">&quot;Analyzing combined text for bias...&quot;</span><span class="p">)</span>
+        <span class="n">prompt</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Analyze the following image-related text for bias, mockery, misinformation, disinformation, &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;or satire. Mention any targeted group if found. &quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;If no bias is found, state that the image appears unbiased.</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+            <span class="sa">f</span><span class="s2">&quot;Text:</span><span class="se">\n\&quot;</span><span class="si">{</span><span class="n">combined_text</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response_with_model</span><span class="p">(</span>
+            <span class="n">prompt</span><span class="p">,</span>
+            <span class="n">progress</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">progress</span><span class="p">(</span><span class="mf">0.6</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="s2">&quot;Post-processing response...&quot;</span><span class="p">)</span>
+        <span class="n">processed_response</span> <span class="o">=</span> <span class="n">post_process_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">)</span>
+
+        <span class="c1"># Extract any biased words</span>
+        <span class="n">bias_section</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;Biased words:&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="s2">&quot;Biased words:&quot;</span> <span class="ow">in</span> <span class="n">response</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">biased_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">bias_section</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)]</span> <span class="k">if</span> <span class="n">bias_section</span> <span class="k">else</span> <span class="p">[]</span>
+        <span class="n">highlighted_text</span> <span class="o">=</span> <span class="n">highlight_bias</span><span class="p">(</span><span class="n">caption_text</span><span class="p">,</span> <span class="n">biased_words</span><span class="p">)</span> <span class="c1"># Displaying only caption_text instead of combined_text for clean output</span>
+
+        <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Analysis complete.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">highlighted_text</span><span class="p">,</span> <span class="n">processed_response</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Analysis failed: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span></div>
+
+
+
+<span class="c1"># Batch Processing Functions</span>
+<div class="viewcode-block" id="analyze_text_csv">
+<a class="viewcode-back" href="../reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_text_csv">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_text_csv</span><span class="p">(</span>
+    <span class="n">file</span><span class="p">:</span> <span class="n">TextIO</span><span class="p">,</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># &lt;--- Summarizer toggle for CSV</span>
+    <span class="n">output_filename</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;analysis_results.csv&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyzes a CSV file containing multiple text entries for bias.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    file</span>
+<span class="sd">        The input CSV file containing text data.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    output_filename</span>
+<span class="sd">        The filename to save the analysis results.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------    </span>
+<span class="sd">    str</span>
+<span class="sd">        The HTML table containing results of batch analysis. </span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; csv_file = open(&quot;data.csv&quot;, mode=&#39;r&#39;, newline=&#39;&#39;, encoding=&#39;utf-8&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; results_table_html = analyze_text_csv(csv_file, use_summarizer=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>     
+    <span class="c1"># TODO Add details about where the csv file is stored </span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;text&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Error: The CSV file must contain a &#39;text&#39; column.&quot;</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">text</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">highlighted_text</span><span class="p">,</span> <span class="n">analysis</span> <span class="o">=</span> <span class="n">analyze_text_for_bias</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">)</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;row_index&quot;</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="n">highlighted_text</span><span class="p">,</span>
+                    <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="n">analysis</span>
+                <span class="p">})</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;row_index&quot;</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Error&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="p">})</span>
+
+        <span class="n">result_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="n">html_table</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># escape=False to render HTML in cells</span>
+        <span class="n">save_path</span> <span class="o">=</span> <span class="n">save_results_to_csv</span><span class="p">(</span><span class="n">result_df</span><span class="p">,</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">default_directory</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">html_table</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error processing CSV: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="analyze_images_batch">
+<a class="viewcode-back" href="../reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_images_batch">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">analyze_images_batch</span><span class="p">(</span>
+    <span class="n">images</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># &lt;--- Summarizer toggle for images</span>
+    <span class="n">output_filename</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;image_analysis_results.csv&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Analyzes a batch of images for bias.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    images</span>
+<span class="sd">        The list of images to analyze for bias.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    output_filename</span>
+<span class="sd">        The filename to save the analysis results.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------    </span>
+<span class="sd">    str</span>
+<span class="sd">        The HTML table containing results of batch analysis.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; results_table_html = analyze_images_batch([&quot;image1.jpg&quot;, &quot;image2.png&quot;], use_summarizer=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">image_path</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">images</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Image file not found: </span><span class="si">{</span><span class="n">image_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">image_path</span><span class="p">)</span>
+                <span class="n">highlighted_caption</span><span class="p">,</span> <span class="n">analysis</span> <span class="o">=</span> <span class="n">analyze_image_for_bias</span><span class="p">(</span>
+                    <span class="n">image</span><span class="p">,</span>
+                    <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span>
+                <span class="p">)</span>
+
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Processing Image: </span><span class="si">{</span><span class="n">image_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Convert image to base64 for HTML display</span>
+                <span class="n">buffered</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">()</span>
+                <span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">buffered</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;PNG&quot;</span><span class="p">)</span>
+                <span class="n">img_str</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">buffered</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+                <span class="n">img_html</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">{</span><span class="n">img_str</span><span class="si">}</span><span class="s1">&quot; width=&quot;200&quot;/&gt;&#39;</span>
+
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;image_index&quot;</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="n">img_html</span><span class="p">,</span>
+                    <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="n">analysis</span>
+                <span class="p">})</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                    <span class="s2">&quot;image_index&quot;</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                    <span class="s2">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;Error&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;analysis&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="p">})</span>
+
+        <span class="n">result_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="n">html_table</span> <span class="o">=</span> <span class="n">result_df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">escape</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">save_path</span> <span class="o">=</span> <span class="n">save_results_to_csv</span><span class="p">(</span><span class="n">result_df</span><span class="p">,</span> <span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">default_directory</span><span class="p">,</span> <span class="n">output_filename</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">html_table</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error processing images: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">save_results_to_csv</span><span class="p">(</span>                <span class="c1">#Move to utils/file.py</span>
+    <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
+    <span class="n">default_directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;results.csv&quot;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Saves a pandas DataFrame to a CSV file in the specified directory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">default_directory</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">file_path</span>
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Error saving file: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="c1"># AI Safety Dashboard</span>
+<div class="viewcode-block" id="display_ai_safety_dashboard">
+<a class="viewcode-back" href="../reference/api/fairsenseai.display_ai_safety_dashboard.html#fairsenseai.display_ai_safety_dashboard">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">display_ai_safety_dashboard</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Figure</span><span class="p">,</span> <span class="n">Figure</span><span class="p">,</span> <span class="n">Figure</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates visualizations for AI safety risks.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Tuple[Figure, Figure, Figure, pd.DataFrame]</span>
+<span class="sd">        A tuple containing the bar chart, pie chart, scatter plot, and the DataFrame of AI safety risks.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; fig_bar, fig_pie, fig_scatter, df = display_ai_safety_dashboard()</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">FAIRSENSE_RUNTIME</span><span class="o">.</span><span class="n">ai_safety_risks</span><span class="p">)</span>
+
+    <span class="c1"># Bar Chart</span>
+    <span class="n">fig_bar</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Risk&#39;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Percentage&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Percentage&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Percentage Distribution of AI Safety Risks&#39;</span><span class="p">,</span>
+        <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Percentage&#39;</span><span class="p">:</span> <span class="s1">&#39;Percentage (%)&#39;</span><span class="p">},</span>
+        <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Description&#39;</span><span class="p">,</span> <span class="s1">&#39;Mitigation&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="n">fig_bar</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+        <span class="n">xaxis_tickangle</span><span class="o">=-</span><span class="mi">45</span><span class="p">,</span>
+        <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span><span class="p">,</span>
+        <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">,</span>
+        <span class="n">legend_title_text</span><span class="o">=</span><span class="s1">&#39;Risk Category&#39;</span>
+    <span class="p">)</span>
+    <span class="n">fig_bar</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">texttemplate</span><span class="o">=</span><span class="s1">&#39;%</span><span class="si">{text}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;outside&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Pie Chart</span>
+    <span class="n">category_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="n">category_counts</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Count&#39;</span><span class="p">]</span>
+    <span class="n">fig_pie</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span>
+        <span class="n">category_counts</span><span class="p">,</span>
+        <span class="n">names</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span>
+        <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Count&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Proportion of Risk Categories&#39;</span><span class="p">,</span>
+        <span class="n">hole</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span>
+        <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">qualitative</span><span class="o">.</span><span class="n">Pastel</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Scatter Plot</span>
+    <span class="n">fig_scatter</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+        <span class="n">df</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Likelihood&#39;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Severity&#39;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="s1">&#39;Percentage&#39;</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Impact&#39;</span><span class="p">,</span>
+        <span class="n">hover_name</span><span class="o">=</span><span class="s1">&#39;Risk&#39;</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Severity vs. Likelihood of AI Risks&#39;</span><span class="p">,</span>
+        <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Severity&#39;</span><span class="p">:</span> <span class="s1">&#39;Severity (1-10)&#39;</span><span class="p">,</span> <span class="s1">&#39;Likelihood&#39;</span><span class="p">:</span> <span class="s1">&#39;Likelihood (1-10)&#39;</span><span class="p">},</span>
+        <span class="n">size_max</span><span class="o">=</span><span class="mi">20</span>
+    <span class="p">)</span>
+    <span class="n">fig_scatter</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">fig_bar</span><span class="p">,</span> <span class="n">fig_pie</span><span class="p">,</span> <span class="n">fig_scatter</span><span class="p">,</span> <span class="n">df</span></div>
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">display_about_page</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Provides an HTML string describing the Fairsense-AI platform.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">about_html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        .about-container {</span>
+<span class="s2">            padding: 20px;</span>
+<span class="s2">            font-size: 16px;</span>
+<span class="s2">            line-height: 1.6;</span>
+<span class="s2">        }</span>
+<span class="s2">        .about-title {</span>
+<span class="s2">            text-align: center;</span>
+<span class="s2">            font-size: 28px;</span>
+<span class="s2">            font-weight: bold;</span>
+<span class="s2">            margin-bottom: 20px;</span>
+<span class="s2">        }</span>
+<span class="s2">        .technology-section {</span>
+<span class="s2">            margin-bottom: 30px;</span>
+<span class="s2">        }</span>
+<span class="s2">        .technology-section h3 {</span>
+<span class="s2">            font-size: 22px;</span>
+<span class="s2">            margin-bottom: 10px;</span>
+<span class="s2">        }</span>
+<span class="s2">        .technology-section p {</span>
+<span class="s2">            margin-left: 20px;</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">    &lt;div class=&quot;about-container&quot;&gt;</span>
+<span class="s2">        &lt;div class=&quot;about-title&quot;&gt;About Fairsense-AI&lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;🔍 Autoregressive Decoder-only Language Model&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Fairsense-AI utilizes LLMs for generating detailed analyses of textual content,</span>
+<span class="s2">                detecting biases, and providing insights on AI governance topics.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;🖼️  Image Captioning&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Fairsense-AI uses Blip for generating descriptive captions of images.</span>
+<span class="s2">                This aids in understanding visual content and assessing it for biases or</span>
+<span class="s2">                sensitive elements.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;🔤 Optical Character Recognition (OCR)&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Fairsense-AI employs Tesseract OCR to extract text from images, allowing</span>
+<span class="s2">                analysis of textual content embedded within images.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;⚙️ Transformers and PyTorch&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Transformers (Hugging Face) and PyTorch power the underlying models, ensuring</span>
+<span class="s2">                robust NLP and deep learning functionalities.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;📊 Plotly for Data Visualization&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Plotly is used for creating interactive charts in the AI Safety Risks Dashboard,</span>
+<span class="s2">                providing engaging and informative data visualizations.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">        &lt;div class=&quot;technology-section&quot;&gt;</span>
+<span class="s2">            &lt;h3&gt;💻 Gradio Interface&lt;/h3&gt;</span>
+<span class="s2">            &lt;p&gt;</span>
+<span class="s2">                Gradio offers a clean, user-friendly UI for interacting with the Fairsense-AI platform.</span>
+<span class="s2">            &lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">    &lt;/div&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">about_html</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">start_server</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Starts the Gradio server with multiple tabs for text analysis, image analysis,</span>
+<span class="sd">    batch processing, AI governance insights, and an AI safety risks dashboard.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">FAIRSENSE_RUNTIME</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">initialize</span><span class="p">()</span>
+
+    <span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;style&gt;</span>
+<span class="s2">        .title {</span>
+<span class="s2">            text-align: center; </span>
+<span class="s2">            font-size: 3em; </span>
+<span class="s2">            font-weight: bold; </span>
+<span class="s2">            margin-bottom: 20px; </span>
+<span class="s2">            color: #4A90E2; /* Soft blue color */</span>
+<span class="s2">            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for depth */</span>
+<span class="s2">            font-family: &#39;Arial&#39;, sans-serif; /* Clean, modern font */</span>
+<span class="s2">            animation: glow 2s infinite; /* Glowing effect */</span>
+<span class="s2">        }</span>
+
+<span class="s2">        .description {</span>
+<span class="s2">            text-align: center; </span>
+<span class="s2">            font-size: 1.2em; </span>
+<span class="s2">            margin-bottom: 40px;</span>
+<span class="s2">            color: #333;</span>
+<span class="s2">        }</span>
+
+<span class="s2">        @keyframes glow {</span>
+<span class="s2">            0% { text-shadow: 0 0 5px #4A90E2, 0 0 10px #4A90E2, 0 0 20px #4A90E2; }</span>
+<span class="s2">            50% { text-shadow: 0 0 10px #4A90E2, 0 0 20px #4A90E2, 0 0 40px #4A90E2; }</span>
+<span class="s2">            100% { text-shadow: 0 0 5px #4A90E2, 0 0 10px #4A90E2, 0 0 20px #4A90E2; }</span>
+<span class="s2">        }</span>
+<span class="s2">    &lt;/style&gt;</span>
+<span class="s2">    &lt;div class=&quot;title&quot;&gt;✨ Fairsense-AI ✨&lt;/div&gt;</span>
+<span class="s2">    &lt;div class=&quot;description&quot;&gt;</span>
+<span class="s2">    Fairsense-AI is an AI-driven platform for analyzing bias in textual and visual content.  </span>
+<span class="s2">    It is designed to promote transparency, fairness, and equity in AI systems. </span>
+<span class="s2">    The platform is built to align with the principles of responsible AI, with a particular focus on fairness, bias, and sustainability.</span>
+<span class="s2">    &lt;/div&gt;</span>
+<span class="s2">    &lt;ul&gt;</span>
+<span class="s2">        &lt;li&gt;&lt;strong&gt;Text Analysis:&lt;/strong&gt; Detect biases in text, highlight problematic terms, and provide actionable feedback.&lt;/li&gt;</span>
+<span class="s2">        &lt;li&gt;&lt;strong&gt;Image Analysis:&lt;/strong&gt; Evaluate images for embedded text and captions for bias.&lt;/li&gt;</span>
+<span class="s2">        &lt;li&gt;&lt;strong&gt;Batch Processing:&lt;/strong&gt; Analyze large datasets of text or images efficiently.&lt;/li&gt;</span>
+<span class="s2">        &lt;li&gt;&lt;strong&gt;AI Governance:&lt;/strong&gt; Gain insights into ethical AI practices and responsible deployment.&lt;/li&gt;</span>
+<span class="s2">    &lt;/ul&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="n">footer</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        &lt;div class=&quot;footer&quot; style=&quot;margin-top: 30px; padding-top: 10px; border-top: 1px solid #ccc;&quot;&gt;</span>
+<span class="s2">            &lt;p&gt;&lt;i&gt;&quot;Responsible AI adoption for a better Sustainable world.&quot;&lt;/i&gt;&lt;/p&gt;</span>
+<span class="s2">            &lt;p&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; The outputs generated by this platform are based on AI models and may vary depending on the input and contextual factors. While efforts are made to ensure accuracy and fairness, users should exercise discretion and validate critical information.&lt;/p&gt;</span>
+<span class="s2">            &lt;p&gt;Contact Person: Shaina Raza, PhD, Vector Institute, email at &lt;a href=&quot;mailto:shaina.raza@vectorinstitute.ai&quot;&gt;shaina.raza@vectorinstitute.ai&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="s2">        &lt;/div&gt;</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="n">demo</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Blocks</span><span class="p">(</span><span class="n">css</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        #ai-dashboard {</span>
+<span class="s2">            padding: 20px;</span>
+<span class="s2">        }</span>
+<span class="s2">        .gradio-container {</span>
+<span class="s2">            background-color: #ffffff;</span>
+<span class="s2">        }</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">demo</span><span class="p">:</span>
+        <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">description</span><span class="p">)</span>
+
+        <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Tabs</span><span class="p">():</span>
+            <span class="c1"># --- Text Analysis Tab ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;📄 Text Analysis&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">text_input</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Textbox</span><span class="p">(</span>
+                        <span class="n">lines</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                        <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Enter text to analyze for bias&quot;</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Text Input&quot;</span>
+                    <span class="p">)</span>
+                    <span class="c1"># Summarizer toggle for text analysis</span>
+                    <span class="n">use_summarizer_checkbox_text</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                        <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Use Summarizer?&quot;</span>
+                    <span class="p">)</span>
+                    <span class="n">analyze_button</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Analyze&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Examples</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Examples</span><span class="p">(</span>
+                    <span class="n">examples</span><span class="o">=</span><span class="p">[</span>
+                        <span class="s2">&quot;Some people say that women are not suitable for leadership roles.&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Our hiring process is fair and unbiased, but we prefer male candidates for their intellect level.&quot;</span>
+                    <span class="p">],</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="n">text_input</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Try some examples&quot;</span>
+                <span class="p">)</span>
+
+                <span class="n">highlighted_text</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Highlighted Text&quot;</span><span class="p">)</span>
+                <span class="n">detailed_analysis</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Detailed Analysis&quot;</span><span class="p">)</span>
+
+                <span class="n">analyze_button</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                    <span class="n">analyze_text_for_bias</span><span class="p">,</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">text_input</span><span class="p">,</span> <span class="n">use_summarizer_checkbox_text</span><span class="p">],</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">highlighted_text</span><span class="p">,</span> <span class="n">detailed_analysis</span><span class="p">],</span>
+                    <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+
+            <span class="c1"># --- Image Analysis Tab ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;🖼️ Image Analysis&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">image_input</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s2">&quot;pil&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Upload Image&quot;</span><span class="p">)</span>
+                    <span class="c1"># Summarizer toggle for image analysis</span>
+                    <span class="n">use_summarizer_checkbox_img</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                        <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Use Summarizer?&quot;</span>
+                    <span class="p">)</span>
+                    <span class="n">analyze_image_button</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Analyze&quot;</span><span class="p">)</span>
+
+                <span class="c1"># Example images</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">                ### Example Images</span>
+<span class="s2">                You can download the following images and upload them to test the analysis:</span>
+<span class="s2">                - [Example 1](https://media.top1000funds.com/wp-content/uploads/2019/12/iStock-525807555.jpg)</span>
+<span class="s2">                - [Example 2](https://ichef.bbci.co.uk/news/1536/cpsprodpb/BB60/production/_115786974_d6bbf591-ea18-46b9-821b-87b8f8f6006c.jpg)</span>
+<span class="s2">                &quot;&quot;&quot;</span><span class="p">)</span>
+
+                <span class="n">highlighted_caption</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Highlighted Text and Caption&quot;</span><span class="p">)</span>
+                <span class="n">image_analysis</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Detailed Analysis&quot;</span><span class="p">)</span>
+
+                <span class="n">analyze_image_button</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                    <span class="n">analyze_image_for_bias</span><span class="p">,</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">image_input</span><span class="p">,</span> <span class="n">use_summarizer_checkbox_img</span><span class="p">],</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="p">[</span><span class="n">highlighted_caption</span><span class="p">,</span> <span class="n">image_analysis</span><span class="p">],</span>
+                    <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+
+            <span class="c1"># --- Batch Text CSV Analysis Tab ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;📂 Batch Text CSV Analysis&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">csv_input</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">File</span><span class="p">(</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Upload Text CSV (with &#39;text&#39; column)&quot;</span><span class="p">,</span>
+                        <span class="n">file_types</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;.csv&#39;</span><span class="p">]</span>
+                    <span class="p">)</span>
+                    <span class="c1"># Summarizer toggle for batch text CSV</span>
+                    <span class="n">use_summarizer_checkbox_text_csv</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                        <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Use Summarizer?&quot;</span>
+                    <span class="p">)</span>
+                    <span class="n">analyze_csv_button</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Analyze CSV&quot;</span><span class="p">)</span>
+
+                <span class="n">csv_results</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;CSV Analysis Results&quot;</span><span class="p">)</span>
+
+                <span class="n">analyze_csv_button</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                    <span class="n">analyze_text_csv</span><span class="p">,</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">csv_input</span><span class="p">,</span> <span class="n">use_summarizer_checkbox_text_csv</span><span class="p">],</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="n">csv_results</span><span class="p">,</span>
+                    <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+
+            <span class="c1"># --- Batch Image Analysis Tab ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;🗂️ Batch Image Analysis&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">images_input</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">File</span><span class="p">(</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Upload Images (multiple allowed)&quot;</span><span class="p">,</span>
+                        <span class="n">file_types</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;image&quot;</span><span class="p">],</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;filepath&quot;</span><span class="p">,</span>
+                        <span class="n">file_count</span><span class="o">=</span><span class="s2">&quot;multiple&quot;</span>
+                    <span class="p">)</span>
+                    <span class="c1"># Summarizer toggle for batch image</span>
+                    <span class="n">use_summarizer_checkbox_img_batch</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                        <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Use Summarizer?&quot;</span>
+                    <span class="p">)</span>
+                    <span class="n">analyze_images_button</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Analyze Images&quot;</span><span class="p">)</span>
+
+                <span class="n">images_results</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Image Batch Analysis Results&quot;</span><span class="p">)</span>
+
+                <span class="n">analyze_images_button</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                    <span class="n">analyze_images_batch</span><span class="p">,</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">images_input</span><span class="p">,</span> <span class="n">use_summarizer_checkbox_img_batch</span><span class="p">],</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="n">images_results</span><span class="p">,</span>
+                    <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+
+            <span class="c1"># --- AI Governance and Safety ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;📜 AI Governance and Safety&quot;</span><span class="p">):</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">predefined_topics</span> <span class="o">=</span> <span class="p">[</span>
+                        <span class="s2">&quot;Ethical AI Development&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Data Privacy in AI&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AI Bias Mitigation Strategies&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Transparency and Explainability&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Regulation and Compliance&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AI in Healthcare&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AI and Employment&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Environmental Impact of AI&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AI in Education&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;AI and Human Rights&quot;</span>
+                    <span class="p">]</span>
+                    <span class="n">governance_dropdown</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+                        <span class="n">choices</span><span class="o">=</span><span class="n">predefined_topics</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Select a Topic&quot;</span><span class="p">,</span>
+                        <span class="n">value</span><span class="o">=</span><span class="n">predefined_topics</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                        <span class="n">interactive</span><span class="o">=</span><span class="kc">True</span>
+                    <span class="p">)</span>
+                <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">Row</span><span class="p">():</span>
+                    <span class="n">governance_input</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Textbox</span><span class="p">(</span>
+                        <span class="n">lines</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                        <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Or enter your own topic or question about AI governance and safety...&quot;</span><span class="p">,</span>
+                        <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Custom Topic&quot;</span><span class="p">,</span>
+                        <span class="n">interactive</span><span class="o">=</span><span class="kc">True</span>
+                    <span class="p">)</span>
+                <span class="c1"># Summarizer toggle for AI Governance</span>
+                <span class="n">use_summarizer_checkbox_governance</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Checkbox</span><span class="p">(</span>
+                    <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Use Summarizer?&quot;</span>
+                <span class="p">)</span>
+                <span class="n">governance_button</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="s2">&quot;Get Insights&quot;</span><span class="p">)</span>
+                <span class="n">governance_insights</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Governance Insights&quot;</span><span class="p">)</span>
+
+                <span class="k">def</span><span class="w"> </span><span class="nf">governance_topic_handler</span><span class="p">(</span>
+                    <span class="n">selected_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="n">custom_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+                    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+                    <span class="n">progress</span><span class="p">:</span> <span class="n">gr</span><span class="o">.</span><span class="n">Progress</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">Progress</span><span class="p">()</span>
+                <span class="p">):</span>
+                    <span class="n">progress</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Starting...&quot;</span><span class="p">)</span>
+                    <span class="n">topic</span> <span class="o">=</span> <span class="n">custom_topic</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">if</span> <span class="n">custom_topic</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">else</span> <span class="n">selected_topic</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">topic</span><span class="p">:</span>
+                        <span class="n">progress</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;No topic selected&quot;</span><span class="p">)</span>
+                        <span class="k">return</span> <span class="s2">&quot;Please select a topic from the dropdown or enter your own question.&quot;</span>
+
+                    <span class="n">progress</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;Generating response...&quot;</span><span class="p">)</span>
+                    <span class="c1"># Pass the summarizer toggle</span>
+                    <span class="n">response</span> <span class="o">=</span> <span class="n">ai_governance_response</span><span class="p">(</span>
+                        <span class="n">topic</span><span class="p">,</span>
+                        <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">,</span>
+                        <span class="n">progress</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">progress</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="mf">0.8</span><span class="p">,</span> <span class="n">desc</span><span class="p">)</span>
+                    <span class="p">)</span>
+                    <span class="n">progress</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;Done&quot;</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="n">response</span>
+
+                <span class="n">governance_button</span><span class="o">.</span><span class="n">click</span><span class="p">(</span>
+                    <span class="n">governance_topic_handler</span><span class="p">,</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">governance_dropdown</span><span class="p">,</span> <span class="n">governance_input</span><span class="p">,</span> <span class="n">use_summarizer_checkbox_governance</span><span class="p">],</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="n">governance_insights</span><span class="p">,</span>
+                    <span class="n">show_progress</span><span class="o">=</span><span class="kc">True</span>
+                <span class="p">)</span>
+
+            <span class="c1"># --- AI Safety Risks Dashboard ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;📊 AI Safety Risks Dashboard&quot;</span><span class="p">):</span>
+                <span class="n">fig_bar</span><span class="p">,</span> <span class="n">fig_pie</span><span class="p">,</span> <span class="n">fig_scatter</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">display_ai_safety_dashboard</span><span class="p">()</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;### Percentage Distribution of AI Safety Risks&quot;</span><span class="p">)</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">fig_bar</span><span class="p">)</span>
+                <span class="c1"># If you&#39;d like to show the pie chart, you can uncomment:</span>
+                <span class="c1"># gr.Markdown(&quot;### Proportion of Risk Categories&quot;)</span>
+                <span class="c1"># gr.Plot(fig_pie)</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;### Severity vs. Likelihood of AI Risks&quot;</span><span class="p">)</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">fig_scatter</span><span class="p">)</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;### AI Safety Risks Data&quot;</span><span class="p">)</span>
+                <span class="n">gr</span><span class="o">.</span><span class="n">Dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+            <span class="c1"># --- About Page ---</span>
+            <span class="k">with</span> <span class="n">gr</span><span class="o">.</span><span class="n">TabItem</span><span class="p">(</span><span class="s2">&quot;ℹ️ About Fairsense-AI&quot;</span><span class="p">):</span>
+                <span class="n">about_output</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">display_about_page</span><span class="p">())</span>
+
+        <span class="n">gr</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">footer</span><span class="p">)</span>
+
+    <span class="n">demo</span><span class="o">.</span><span class="n">queue</span><span class="p">()</span><span class="o">.</span><span class="n">launch</span><span class="p">(</span><span class="n">share</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">start_server</span><span class="p">()</span>
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Vector AI Engineering
+            </div>
+            <!--
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+            -->
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        <div class="footer-container" style="text-align: center;">
+          <div class="logo">
+            <a class="logo" href="https://vectorinstitute.ai/">
+              <span class="logo"></span>
+              <img alt="Logo of the Vector Institute" style="width:90px; max-width:90px;" src="../_static/logos/vector_logo.png" />
+            </a>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div></body>
+</html>

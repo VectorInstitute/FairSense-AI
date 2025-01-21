@@ -1,6 +1,0 @@
-site_name: FairSense-AI
-theme:
-  name: readthedocs
-nav:
-  - API Reference: index.md
-  - Documentation: documentation.md
