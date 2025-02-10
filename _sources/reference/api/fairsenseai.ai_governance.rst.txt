@@ -1,10 +1,10 @@
 .. role:: hidden
     :class: hidden-section
 
-#############
-AI Governance
-#############
+##################
+AI Risk Management
+##################
 
-Provides insights into AI governance and safety. 
+Provides insights and risk assessment on the given topic. 
 
 .. autofunction:: fairsenseai.ai_governance_response

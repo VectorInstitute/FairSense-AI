@@ -40,17 +40,17 @@ Quickstart Code Examples
       print("Highlighted Caption:", highlighted_caption)
       print("Image Analysis:", image_analysis)
 
-3. **Insights on AI Governance & Safety**
+3. **AI Risk Management**
 
    .. code-block:: python
 
       from fairsenseai import ai_governance_response
 
-      # Get insights on topics related to AI governance and safety
+      # Get insights and risk assessment on selected topic
       insights = ai_governance_response("AI Bias Mitigation Strategies")
 
       # Print the result
-      print("AI Governance & Safety Insights:", insights)
+      print("Insights and risk assessment:", insights)
 
 4. **Launch the Interactive Application**
 
