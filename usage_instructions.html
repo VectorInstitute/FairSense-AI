@@ -223,17 +223,29 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Code Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Bias Detection Tutorial</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Usage Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ai_risk_management.html">AI Risk Management</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.ai_governance.html">AI Risk Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/fairsenseai.analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.start_server.html">Start Server</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
@@ -276,8 +288,8 @@
           <section id="usage-instructions">
 <h1>Usage Instructions<a class="headerlink" href="#usage-instructions" title="Link to this heading">¶</a></h1>
 <p><strong>Launching the Application</strong></p>
-<p>Run the following command to start Fair-Sense-AI:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fair-sense-AI
+<p>Run the following command to start Fairsense-AI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fairsenseai
 </pre></div>
 </div>
 <p>This will launch the Gradio-powered interface in your default web browser.</p>
@@ -286,33 +298,42 @@
 <ol class="arabic simple">
 <li><p><strong>Text Analysis</strong></p>
 <ul class="simple">
+<li><p>Navigate to the <strong>Bias Identification</strong> page.</p></li>
+<li><p>Select the <strong>Text Analysis</strong> tab.</p></li>
 <li><p>Input or paste text in the <strong>Text Analysis</strong> tab.</p></li>
 <li><p>Click <strong>Analyze</strong> to detect and highlight biases.</p></li>
 </ul>
 </li>
 <li><p><strong>Image Analysis</strong></p>
 <ul class="simple">
+<li><p>Navigate to the <strong>Bias Identification</strong> page.</p></li>
+<li><p>Select the <strong>Image Analysis</strong> tab.</p></li>
 <li><p>Upload an image in the <strong>Image Analysis</strong> tab.</p></li>
 <li><p>Click <strong>Analyze</strong> to detect biases in embedded text or captions.</p></li>
 </ul>
 </li>
 <li><p><strong>Batch Text CSV Analysis</strong></p>
 <ul class="simple">
-<li><p>Upload a CSV file with a <code class="docutils literal notranslate"><span class="pre">text</span></code> column in the <strong>Batch Text CSV Analysis</strong> tab.</p></li>
+<li><p>Navigate to the <strong>Bias Identification</strong> page.</p></li>
+<li><p>Select the <strong>Batch Text CSV Analysis</strong> tab.</p></li>
+<li><p>Upload a CSV file with a <code class="docutils literal notranslate"><span class="pre">text</span></code> column.</p></li>
 <li><p>Click <strong>Analyze CSV</strong> to process all entries.</p></li>
 </ul>
 </li>
 <li><p><strong>Batch Image Analysis</strong></p>
 <ul class="simple">
-<li><p>Upload multiple images in the <strong>Batch Image Analysis</strong> tab.</p></li>
+<li><p>Navigate to the <strong>Bias Identification</strong> page.</p></li>
+<li><p>Select the <strong>Batch Image Analysis</strong> tab.</p></li>
+<li><p>Upload multiple images.</p></li>
 <li><p>Click <strong>Analyze Images</strong> for a detailed review.</p></li>
 </ul>
 </li>
-<li><p><strong>Risk Management</strong></p>
+<li><p><strong>AI Risk Management</strong></p>
 <ul class="simple">
-<li><p>Navigate to the <strong>AI Risk Management</strong> tab.</p></li>
-<li><p>Choose a predefined topic or input your own query.</p></li>
-<li><p>Click <strong>Get Insights</strong> for recommendations.</p></li>
+<li><p>Navigate to the <strong>Risk Management</strong> tab.</p></li>
+<li><p>Enter the brief description of your project/task- either your own or one of the provided examples.</p></li>
+<li><p>Click <strong>Analyze Risks</strong></p></li>
+<li><p>Tool will display the relevant risks. It will also display the downloadable csv file with downloadable risk details. The CSV file will have the risk details, categories and suggested actions.</p></li>
 </ul>
 </li>
 </ol>

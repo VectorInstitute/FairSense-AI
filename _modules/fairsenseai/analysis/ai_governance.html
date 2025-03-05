@@ -3,23 +3,22 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark">
-    <meta name="google-site-verification" content="i0qQRaR9OA3tSz_9tDocdcXGY27Ox_cy4FrvTHD2C_0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta name="google-site-verification" content="i0qQRaR9OA3tSz_9tDocdcXGY27Ox_cy4FrvTHD2C_0" />
     
       <meta name="description" content="FairSense AI API documentation">
-    <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="AI Safety Dashboard" href="fairsenseai.display_ai_safety_dashboard.html" /><link rel="prev" title="Bias Analysis" href="fairsenseai.analyze_bias.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
 
     <meta name="generator" content="sphinx-7.4.7, furo 2024.08.06"/>
 
     
     <meta name="msvalidate.01" content="8D2A5032F006424CAF54C0DDCD16F666" />
       
-        <title>AI Risk Management - FairSense AI</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+        <title>fairsenseai.analysis.ai_governance - FairSense AI</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -50,15 +49,15 @@
       }
     }
   }
-</style><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=ccdb6887"></script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script src="../../_static/require.min.js?v=53367eec"></script>
-    <script src="../../_static/custom.js?v=275847af"></script>
+</style><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=ccdb6887"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/require.min.js?v=53367eec"></script>
+    <script src="../../../_static/custom.js?v=275847af"></script>
     
     <script src="https://kit.fontawesome.com/2c1f516901.js" crossorigin="anonymous"></script>
 
@@ -192,7 +191,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">FairSense AI</div></a>
+      <a href="../../../index.html"><div class="brand">FairSense AI</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -203,7 +202,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -212,33 +211,45 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
   <span class="sidebar-brand-text">FairSense AI</span>
   
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart Code Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Bias Detection Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage_instructions.html">Usage Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ai_risk_management.html">AI Risk Management</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../../api.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AI Risk Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart Code Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Bias Detection Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage_instructions.html">Usage Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai_risk_management.html">AI Risk Management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../reference/api/fairsenseai.analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Team</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../reference/api/fairsenseai.start_server.html">Start Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html">Team</a></li>
 </ul>
 
 </div>
@@ -258,8 +269,7 @@
           <span>Back to top</span>
         </a>
         <div class="content-icon-container">
-          
-<div class="theme-toggle-container theme-toggle-content">
+          <div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -267,67 +277,65 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="ai-risk-management">
-<h1>AI Risk Management<a class="headerlink" href="#ai-risk-management" title="Link to this heading">¶</a></h1>
-<p>Provides insights and risk assessment on the given topic.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="fairsenseai.ai_governance_response">
-<span class="sig-name descname"><span class="pre">ai_governance_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_summarizer</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/fairsenseai.html#ai_governance_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fairsenseai.ai_governance_response" title="Link to this definition">¶</a></dt>
-<dd><p>Generates insights and recommendations on AI governance and safety topics.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>prompt</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – The input topic or question on AI governance and safety.</p></li>
-<li><p><strong>use_summarizer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.9/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – Whether to use the summarizer to condense the response.</p></li>
-<li><p><strong>progress</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.9/library/typing.html#typing.Optional" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code></a>[<a class="reference external" href="https://docs.python.org/3.9/library/typing.html#typing.Callable" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Callable</span></code></a>[[<a class="reference external" href="https://docs.python.org/3.9/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, <a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>], <a class="reference external" href="https://docs.python.org/3.9/library/constants.html#None" title="(in Python v3.9)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>]]</span>) – A callback function to report progress.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The generated response with insights and recommendations on AI Governance and Safety.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)">str</a></p>
-</dd>
-</dl>
-<p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ai_governance_response</span><span class="p">(</span><span class="s2">&quot;Environment Impact of AI&quot;</span><span class="p">)</span>
+          <h1>Source code for fairsenseai.analysis.ai_governance</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tool to generate insights and recommendations on AI governance and safety topics.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.runtime</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_response_with_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.utils.helper</span><span class="w"> </span><span class="kn">import</span> <span class="n">post_process_response</span>
+
+<div class="viewcode-block" id="ai_governance_response">
+<a class="viewcode-back" href="../../../reference/api/_autosummary/fairsenseai.analysis.ai_governance.ai_governance_response.html#fairsenseai.analysis.ai_governance.ai_governance_response">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ai_governance_response</span><span class="p">(</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+    <span class="n">use_summarizer</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>  <span class="c1"># &lt;-- Summarizer toggle</span>
+    <span class="n">progress</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generates insights and recommendations on AI governance and safety topics.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    prompt</span>
+<span class="sd">        The input topic or question on AI governance and safety.</span>
+<span class="sd">    use_summarizer</span>
+<span class="sd">        Whether to use the summarizer to condense the response.</span>
+<span class="sd">    progress</span>
+<span class="sd">        A callback function to report progress.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    str</span>
+<span class="sd">        The generated response with insights and recommendations on AI Governance and Safety.</span>
+
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; ai_governance_response(&quot;Environment Impact of AI&quot;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">generate_response_with_model</span><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Provide insights and recommendations on the following AI governance and safety topic:</span><span class="se">\n\n</span><span class="si">{</span><span class="n">prompt</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">progress</span><span class="o">=</span><span class="n">progress</span>
+    <span class="p">)</span>
+    <span class="c1"># Use summarizer toggle</span>
+    <span class="k">return</span> <span class="n">post_process_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="n">use_summarizer</span><span class="p">)</span></div>
+
 </pre></div>
-</div>
-</dd></dl>
-
-</section>
-
         </article>
       </div>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="fairsenseai.display_ai_safety_dashboard.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">AI Safety Dashboard</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="fairsenseai.analyze_bias.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Bias Analysis</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -349,34 +357,15 @@
           <div class="logo">
             <a class="logo" href="https://vectorinstitute.ai/">
               <span class="logo"></span>
-              <img alt="Logo of the Vector Institute" style="width:90px; max-width:90px;" src="../../_static/logos/vector_logo.png" />
+              <img alt="Logo of the Vector Institute" style="width:90px; max-width:90px;" src="../../../_static/logos/vector_logo.png" />
             </a>
           </div>
         </div>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">AI Risk Management</a><ul>
-<li><a class="reference internal" href="#fairsenseai.ai_governance_response"><code class="docutils literal notranslate"><span class="pre">ai_governance_response()</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

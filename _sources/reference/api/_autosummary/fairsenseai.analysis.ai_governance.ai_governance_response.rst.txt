@@ -1,0 +1,6 @@
+fairsenseai.analysis.ai\_governance.ai\_governance\_response
+============================================================
+
+.. currentmodule:: fairsenseai.analysis.ai_governance
+
+.. autofunction:: ai_governance_response

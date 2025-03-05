@@ -7,19 +7,19 @@
 
     
       <meta name="description" content="FairSense AI API documentation">
-    <link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Troubleshooting" href="../../troubleshooting.html" /><link rel="prev" title="AI Risk Management" href="fairsenseai.ai_governance.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="fairsenseai.analysis.risk_assessment" href="fairsenseai.analysis.risk_assessment.html" /><link rel="prev" title="fairsenseai.analysis.bias.analyze_text_csv" href="fairsenseai.analysis.bias.analyze_text_csv.html" />
 
     <meta name="generator" content="sphinx-7.4.7, furo 2024.08.06"/>
 
     
     <meta name="msvalidate.01" content="8D2A5032F006424CAF54C0DDCD16F666" />
       
-        <title>AI Safety Dashboard - FairSense AI</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+        <title>fairsenseai.analysis.bias.analyze_text_for_bias - FairSense AI</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
     
     
 
@@ -50,15 +50,15 @@
       }
     }
   }
-</style><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=ccdb6887"></script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
-    <script src="../../_static/require.min.js?v=53367eec"></script>
-    <script src="../../_static/custom.js?v=275847af"></script>
+</style><script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=ccdb6887"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/require.min.js?v=53367eec"></script>
+    <script src="../../../_static/custom.js?v=275847af"></script>
     
     <script src="https://kit.fontawesome.com/2c1f516901.js" crossorigin="anonymous"></script>
 
@@ -192,7 +192,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="../../index.html"><div class="brand">FairSense AI</div></a>
+      <a href="../../../index.html"><div class="brand">FairSense AI</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -212,33 +212,45 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
   
   
   <span class="sidebar-brand-text">FairSense AI</span>
   
-</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart Code Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorial.html">Bias Detection Tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage_instructions.html">Usage Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../ai_risk_management.html">AI Risk Management</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../../api.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fairsenseai.ai_governance.html">AI Risk Management</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">AI Safety Dashboard</a></li>
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../quickstart.html">Quickstart Code Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial.html">Bias Detection Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage_instructions.html">Usage Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ai_risk_management.html">AI Risk Management</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../../api.html">API Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../fairsenseai.analysis.html">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current has-children"><a class="reference internal" href="fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4 current current-page"><a class="current reference internal" href="#">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Team</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../fairsenseai.start_server.html">Start Server</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html">Team</a></li>
 </ul>
 
 </div>
@@ -273,23 +285,29 @@
           </label>
         </div>
         <article role="main">
-          <section id="ai-safety-dashboard">
-<h1>AI Safety Dashboard<a class="headerlink" href="#ai-safety-dashboard" title="Link to this heading">¶</a></h1>
-<p>Provides dashboard to visualize insights on AI safety risk.</p>
+          <section id="fairsenseai-analysis-bias-analyze-text-for-bias">
+<h1>fairsenseai.analysis.bias.analyze_text_for_bias<a class="headerlink" href="#fairsenseai-analysis-bias-analyze-text-for-bias" title="Link to this heading">¶</a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="fairsenseai.display_ai_safety_dashboard">
-<span class="sig-name descname"><span class="pre">display_ai_safety_dashboard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/fairsenseai.html#display_ai_safety_dashboard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fairsenseai.display_ai_safety_dashboard" title="Link to this definition">¶</a></dt>
-<dd><p>Creates visualizations for AI safety risks.</p>
+<dt class="sig sig-object py" id="fairsenseai.analysis.bias.analyze_text_for_bias">
+<span class="sig-name descname"><span class="pre">analyze_text_for_bias</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_summarizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress=&lt;gradio.helpers.Progress</span> <span class="pre">object&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/fairsenseai/analysis/bias.html#analyze_text_for_bias"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#fairsenseai.analysis.bias.analyze_text_for_bias" title="Link to this definition">¶</a></dt>
+<dd><p>Analyzes a given text for bias and provides a detailed analysis.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A tuple containing the bar chart, pie chart, scatter plot, and the DataFrame of AI safety risks.</p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text_input</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span>) – The input text to analyze for bias.</p></li>
+<li><p><strong>use_summarizer</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3.9/library/functions.html#bool" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span>) – Whether to use the summarizer to condense the response.</p></li>
+<li><p><strong>progress</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Progress</span></code></span>) – A callback function to report progress.</p></li>
+</ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Tuple[Figure, Figure, Figure, pd.DataFrame]</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the highlighted text with bias words and the detailed analysis.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[<a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)">str</a>, <a class="reference external" href="https://docs.python.org/3.9/library/stdtypes.html#str" title="(in Python v3.9)">str</a>]</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fig_bar</span><span class="p">,</span> <span class="n">fig_pie</span><span class="p">,</span> <span class="n">fig_scatter</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">display_ai_safety_dashboard</span><span class="p">()</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">highlighted</span><span class="p">,</span> <span class="n">analysis</span> <span class="o">=</span> <span class="n">analyze_text_for_bias</span><span class="p">(</span><span class="s2">&quot;This text may contain bias.&quot;</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -301,23 +319,23 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../../troubleshooting.html">
+          <a class="next-page" href="fairsenseai.analysis.risk_assessment.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Troubleshooting</div>
+                <div class="title">fairsenseai.analysis.risk_assessment</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="fairsenseai.ai_governance.html">
+          <a class="prev-page" href="fairsenseai.analysis.bias.analyze_text_csv.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">AI Risk Management</div>
+                <div class="title">fairsenseai.analysis.bias.analyze_text_csv</div>
                 
               </div>
             </a>
@@ -342,7 +360,7 @@
           <div class="logo">
             <a class="logo" href="https://vectorinstitute.ai/">
               <span class="logo"></span>
-              <img alt="Logo of the Vector Institute" style="width:90px; max-width:90px;" src="../../_static/logos/vector_logo.png" />
+              <img alt="Logo of the Vector Institute" style="width:90px; max-width:90px;" src="../../../_static/logos/vector_logo.png" />
             </a>
           </div>
         </div>
@@ -361,8 +379,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">AI Safety Dashboard</a><ul>
-<li><a class="reference internal" href="#fairsenseai.display_ai_safety_dashboard"><code class="docutils literal notranslate"><span class="pre">display_ai_safety_dashboard()</span></code></a></li>
+<li><a class="reference internal" href="#">fairsenseai.analysis.bias.analyze_text_for_bias</a><ul>
+<li><a class="reference internal" href="#fairsenseai.analysis.bias.analyze_text_for_bias"><code class="docutils literal notranslate"><span class="pre">analyze_text_for_bias()</span></code></a></li>
 </ul>
 </li>
 </ul>

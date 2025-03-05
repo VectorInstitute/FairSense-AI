@@ -1,0 +1,6 @@
+fairsenseai.analysis.bias.analyze\_image\_for\_bias
+===================================================
+
+.. currentmodule:: fairsenseai.analysis.bias
+
+.. autofunction:: analyze_image_for_bias

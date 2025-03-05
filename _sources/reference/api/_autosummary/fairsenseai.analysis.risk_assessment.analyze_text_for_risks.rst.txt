@@ -1,0 +1,6 @@
+fairsenseai.analysis.risk\_assessment.analyze\_text\_for\_risks
+===============================================================
+
+.. currentmodule:: fairsenseai.analysis.risk_assessment
+
+.. autofunction:: analyze_text_for_risks

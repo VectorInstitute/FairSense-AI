@@ -223,17 +223,29 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Setup</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Quickstart Code Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Bias Detection Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage_instructions.html">Usage Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ai_risk_management.html">AI Risk Management</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.ai_governance.html">AI Risk Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/fairsenseai.analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.start_server.html">Start Server</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
@@ -277,7 +289,7 @@
 <h1>Quickstart Code Examples<a class="headerlink" href="#quickstart-code-examples" title="Link to this heading">¶</a></h1>
 <ol class="arabic">
 <li><p><strong>Text Bias Analysis</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze_text_for_bias</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.analysis.bias</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze_text_for_bias</span>
 
 <span class="c1"># Example input text to analyze for bias</span>
 <span class="n">text_input</span> <span class="o">=</span> <span class="s2">&quot;Men are naturally better at decision-making, while women excel at emotional tasks.&quot;</span>
@@ -295,37 +307,53 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze_image_for_bias</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.analysis.bias</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze_image_for_bias</span>
 
-<span class="c1"># URL of the image to analyze</span>
-<span class="n">image_url</span> <span class="o">=</span> <span class="s2">&quot;https://media.top1000funds.com/wp-content/uploads/2019/12/iStock-525807555.jpg&quot;</span>
+<span class="c1"># URL of the image to analyze.</span>
+<span class="n">image_url</span> <span class="o">=</span> <span class="s2">&quot;https://ichef.bbci.co.uk/news/1536/cpsprodpb/BB60/production/_115786974_d6bbf591-ea18-46b9-821b-87b8f8f6006c.jpg&quot;</span>
 
-<span class="c1"># Fetch and load the image</span>
+<span class="c1"># Fetch and load the image from the URL.</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+   <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+   <span class="n">small_image</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+   <span class="n">small_image</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">))</span>
 
-<span class="c1"># Analyze the image for bias</span>
-<span class="n">highlighted_caption</span><span class="p">,</span> <span class="n">image_analysis</span> <span class="o">=</span> <span class="n">analyze_image_for_bias</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+   <span class="c1"># Display the resized image and analyze for bias.</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original Image (Resized):&quot;</span><span class="p">)</span>
+   <span class="n">display</span><span class="p">(</span><span class="n">small_image</span><span class="p">)</span>
+   <span class="n">highlighted_caption</span><span class="p">,</span> <span class="n">image_analysis</span> <span class="o">=</span> <span class="n">analyze_image_for_bias</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">use_summarizer</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Print the analysis results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Highlighted Caption:&quot;</span><span class="p">,</span> <span class="n">highlighted_caption</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Image Analysis:&quot;</span><span class="p">,</span> <span class="n">image_analysis</span><span class="p">)</span>
+   <span class="c1"># Print and display analysis results.</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Highlighted Caption:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">highlighted_caption</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Image Analysis:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">image_analysis</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">highlighted_caption</span><span class="p">:</span>
+      <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">highlighted_caption</span><span class="p">))</span>
+   <span class="k">else</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to fetch the image. Status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>AI Risk Management</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai</span><span class="w"> </span><span class="kn">import</span> <span class="n">ai_governance_response</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.analysis.risk_assessment</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze_text_for_risks</span>
 
-<span class="c1"># Get insights and risk assessment on selected topic</span>
-<span class="n">insights</span> <span class="o">=</span> <span class="n">ai_governance_response</span><span class="p">(</span><span class="s2">&quot;AI Bias Mitigation Strategies&quot;</span><span class="p">)</span>
+<span class="c1"># Get risk assessment and mitigation strategies on the given scenario</span>
+<span class="n">scenario</span> <span class="o">=</span> <span class="s2">&quot;We&#39;re developing a facial recognition system for public spaces&quot;</span>
+<span class="n">highlighted_risks</span><span class="p">,</span> <span class="n">csv_path</span> <span class="o">=</span> <span class="n">analyze_text_for_risks</span><span class="p">(</span>
+   <span class="n">scenario</span><span class="p">,</span>
+   <span class="n">top_k_risk</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+   <span class="n">top_k_ai_rmf</span><span class="o">=</span><span class="mi">2</span>
+   <span class="p">)</span>
 
-<span class="c1"># Print the result</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Insights and risk assessment:&quot;</span><span class="p">,</span> <span class="n">insights</span><span class="p">)</span>
+<span class="c1"># Print the result and saved CSV path</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Risks:&quot;</span><span class="p">,</span> <span class="n">highlighted_risks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Results saved to: </span><span class="si">{</span><span class="n">csv_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Launch the Interactive Application</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai</span><span class="w"> </span><span class="kn">import</span> <span class="n">start_server</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">fairsenseai.app</span><span class="w"> </span><span class="kn">import</span> <span class="n">start_server</span>
 
 <span class="c1"># Launch the Gradio application (will open in the browser)</span>
 <span class="n">start_server</span><span class="p">()</span>

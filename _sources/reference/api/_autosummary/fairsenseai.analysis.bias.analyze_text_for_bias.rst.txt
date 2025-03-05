@@ -1,0 +1,6 @@
+fairsenseai.analysis.bias.analyze\_text\_for\_bias
+==================================================
+
+.. currentmodule:: fairsenseai.analysis.bias
+
+.. autofunction:: analyze_text_for_bias

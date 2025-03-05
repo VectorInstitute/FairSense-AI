@@ -220,17 +220,29 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+  <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Code Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Bias Detection Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage_instructions.html">Usage Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ai_risk_management.html">AI Risk Management</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.ai_governance.html">AI Risk Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/fairsenseai.analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.start_server.html">Start Server</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
@@ -272,23 +284,25 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#D"><strong>D</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a></div>
 </section>
 <section id="A" class="genindex-section">
   <h2>A</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="reference/api/fairsenseai.ai_governance.html#fairsenseai.ai_governance_response">ai_governance_response() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_governance.ai_governance_response.html#fairsenseai.analysis.ai_governance.ai_governance_response">ai_governance_response() (in module fairsenseai.analysis.ai_governance)</a>
 </li>
-        <li><a href="reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_image_for_bias">analyze_image_for_bias() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html#fairsenseai.analysis.bias.analyze_image_for_bias">analyze_image_for_bias() (in module fairsenseai.analysis.bias)</a>
+</li>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html#fairsenseai.analysis.bias.analyze_images_batch">analyze_images_batch() (in module fairsenseai.analysis.bias)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_images_batch">analyze_images_batch() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html#fairsenseai.analysis.bias.analyze_text_csv">analyze_text_csv() (in module fairsenseai.analysis.bias)</a>
 </li>
-        <li><a href="reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_text_csv">analyze_text_csv() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html#fairsenseai.analysis.bias.analyze_text_for_bias">analyze_text_for_bias() (in module fairsenseai.analysis.bias)</a>
 </li>
-        <li><a href="reference/api/fairsenseai.analyze_bias.html#fairsenseai.analyze_text_for_bias">analyze_text_for_bias() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html#fairsenseai.analysis.risk_assessment.analyze_text_for_risks">analyze_text_for_risks() (in module fairsenseai.analysis.risk_assessment)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -298,7 +312,99 @@
   <h2>D</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="reference/api/fairsenseai.display_ai_safety_dashboard.html#fairsenseai.display_ai_safety_dashboard">display_ai_safety_dashboard() (in module fairsenseai)</a>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_safety_dashboard.display_ai_safety_dashboard.html#fairsenseai.analysis.ai_safety_dashboard.display_ai_safety_dashboard">display_ai_safety_dashboard() (in module fairsenseai.analysis.ai_safety_dashboard)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    fairsenseai.analysis
+
+        <ul>
+          <li><a href="reference/api/fairsenseai.analysis.html#module-fairsenseai.analysis">module</a>
+</li>
+        </ul></li>
+        <li>
+    fairsenseai.analysis.ai_governance
+
+        <ul>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_governance.html#module-fairsenseai.analysis.ai_governance">module</a>
+</li>
+        </ul></li>
+        <li>
+    fairsenseai.analysis.ai_safety_dashboard
+
+        <ul>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_safety_dashboard.html#module-fairsenseai.analysis.ai_safety_dashboard">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    fairsenseai.analysis.bias
+
+        <ul>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.html#module-fairsenseai.analysis.bias">module</a>
+</li>
+        </ul></li>
+        <li>
+    fairsenseai.analysis.risk_assessment
+
+        <ul>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html#module-fairsenseai.analysis.risk_assessment">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    module
+
+        <ul>
+          <li><a href="reference/api/fairsenseai.analysis.html#module-fairsenseai.analysis">fairsenseai.analysis</a>
+</li>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_governance.html#module-fairsenseai.analysis.ai_governance">fairsenseai.analysis.ai_governance</a>
+</li>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.ai_safety_dashboard.html#module-fairsenseai.analysis.ai_safety_dashboard">fairsenseai.analysis.ai_safety_dashboard</a>
+</li>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.bias.html#module-fairsenseai.analysis.bias">fairsenseai.analysis.bias</a>
+</li>
+          <li><a href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html#module-fairsenseai.analysis.risk_assessment">fairsenseai.analysis.risk_assessment</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html#fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.risk_with_ai_rmf">risk_with_ai_rmf() (RiskEmbeddingIndex method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html#fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex">RiskEmbeddingIndex (class in fairsenseai.analysis.risk_assessment)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="reference/api/fairsenseai.start_server.html#fairsenseai.app.start_server">start_server() (in module fairsenseai.app)</a>
 </li>
     </ul></td>
   </tr></table>

@@ -1,0 +1,25 @@
+fairsenseai.analysis.risk\_assessment.RiskEmbeddingIndex
+========================================================
+
+.. currentmodule:: fairsenseai.analysis.risk_assessment
+
+.. autoclass:: RiskEmbeddingIndex
+   :members:
+   :show-inheritance:
+   :inherited-members:
+   :special-members: __call__, __add__, __mul__
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~RiskEmbeddingIndex.risk_with_ai_rmf
+   
+   
+
+   
+   
+   

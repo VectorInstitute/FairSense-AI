@@ -7,7 +7,7 @@
 
     
       <meta name="description" content="FairSense AI API documentation">
-    <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Quickstart Code Examples" href="quickstart.html" /><link rel="prev" title="What is FairSense-AI?" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Quickstart Code Examples" href="quickstart.html" /><link rel="prev" title="What is Fairsense-AI?" href="index.html" />
 
     <meta name="generator" content="sphinx-7.4.7, furo 2024.08.06"/>
 
@@ -223,17 +223,29 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
+  <ul class="current">
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Installation and Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart Code Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorial.html">Bias Detection Tutorial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage_instructions.html">Usage Instructions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ai_risk_management.html">AI Risk Management</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="api.html">API Reference</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API Reference</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.analyze_bias.html">Bias Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.ai_governance.html">AI Risk Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.display_ai_safety_dashboard.html">AI Safety Dashboard</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="reference/api/fairsenseai.analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Analysis</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.html">fairsenseai.analysis.bias</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.bias</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_image_for_bias.html">fairsenseai.analysis.bias.analyze_image_for_bias</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_images_batch.html">fairsenseai.analysis.bias.analyze_images_batch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_csv.html">fairsenseai.analysis.bias.analyze_text_csv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.bias.analyze_text_for_bias.html">fairsenseai.analysis.bias.analyze_text_for_bias</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.html">fairsenseai.analysis.risk_assessment</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of fairsenseai.analysis.risk_assessment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.analyze_text_for_risks.html">fairsenseai.analysis.risk_assessment.analyze_text_for_risks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="reference/api/_autosummary/fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex.html">fairsenseai.analysis.risk_assessment.RiskEmbeddingIndex</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/fairsenseai.start_server.html">Start Server</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
@@ -320,7 +332,7 @@ Download and install Tesseract OCR from <a class="reference external" href="http
 </ol>
 </section>
 <section id="step-2-install-fairsense-ai">
-<h2>Step 2: Install FairSense-AI<a class="headerlink" href="#step-2-install-fairsense-ai" title="Link to this heading">¶</a></h2>
+<h2>Step 2: Install Fairsense-AI<a class="headerlink" href="#step-2-install-fairsense-ai" title="Link to this heading">¶</a></h2>
 <p>Install the <code class="docutils literal notranslate"><span class="pre">fair-sense-ai</span></code> package using pip:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>fair-sense-ai
 </pre></div>
@@ -328,7 +340,7 @@ Download and install Tesseract OCR from <a class="reference external" href="http
 </section>
 <section id="tutorial-on-local-inference-setup">
 <h2>Tutorial on Local Inference &amp; Setup<a class="headerlink" href="#tutorial-on-local-inference-setup" title="Link to this heading">¶</a></h2>
-<p>Refer to <a class="reference external" href="_static/attachment/FairSense_AI_Tutorial.pdf">FairSense AI Tutorial</a> for detailed instructions on local inference and setup.</p>
+<p>Refer to <a class="reference external" href="_static/attachment/Fairsense-AI_Tutorial.pdf">Fairsense-AI Tutorial</a> for detailed instructions on local inference and setup.</p>
 </section>
 </section>
 
@@ -399,7 +411,7 @@ Download and install Tesseract OCR from <a class="reference external" href="http
             <ul>
 <li><a class="reference internal" href="#">Installation and Setup</a><ul>
 <li><a class="reference internal" href="#step-1-install-supporting-tools">Step 1: Install Supporting Tools</a></li>
-<li><a class="reference internal" href="#step-2-install-fairsense-ai">Step 2: Install FairSense-AI</a></li>
+<li><a class="reference internal" href="#step-2-install-fairsense-ai">Step 2: Install Fairsense-AI</a></li>
 <li><a class="reference internal" href="#tutorial-on-local-inference-setup">Tutorial on Local Inference &amp; Setup</a></li>
 </ul>
 </li>

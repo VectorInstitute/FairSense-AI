@@ -1,0 +1,40 @@
+﻿fairsenseai.analysis.risk\_assessment
+=====================================
+
+.. automodule:: fairsenseai.analysis.risk_assessment
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+      :nosignatures:
+   
+      analyze_text_for_risks
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree:
+      :template: custom-class-template.rst
+      :nosignatures:
+   
+      RiskEmbeddingIndex
+   
+   
+
+   
+   
+   
+
+
+

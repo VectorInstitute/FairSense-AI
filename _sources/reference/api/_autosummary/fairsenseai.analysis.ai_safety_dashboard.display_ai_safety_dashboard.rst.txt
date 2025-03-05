@@ -1,0 +1,6 @@
+fairsenseai.analysis.ai\_safety\_dashboard.display\_ai\_safety\_dashboard
+=========================================================================
+
+.. currentmodule:: fairsenseai.analysis.ai_safety_dashboard
+
+.. autofunction:: display_ai_safety_dashboard

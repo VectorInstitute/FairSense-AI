@@ -1,0 +1,6 @@
+fairsenseai.analysis.bias.analyze\_images\_batch
+================================================
+
+.. currentmodule:: fairsenseai.analysis.bias
+
+.. autofunction:: analyze_images_batch
